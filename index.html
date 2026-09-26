@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lovely Files</title>
+<title>LOVELY FILES</title>
 
-<!-- PDF generator -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <style>
@@ -16,9 +15,43 @@
 
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#fcf8f6;
-    color:#514641;
+    font-family:Arial, sans-serif;
+    background:#f7f4ee;
+    color:#5b5a55;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* ---------- LANGUAGE ---------- */
+
+.language-bar{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    padding:18px 15px 5px;
+}
+
+.language-bar button{
+    border:1px solid #d8d2c6;
+    background:#fffdf9;
+    color:#77736b;
+    padding:9px 18px;
+    border-radius:20px;
+    font-size:14px;
+    transition:.2s;
+}
+
+.language-bar button:hover{
+    background:#eee9df;
+}
+
+.language-bar button.active{
+    background:#d9d3c5;
+    color:#4f4b43;
 }
 
 /* ---------- WELCOME ---------- */
@@ -26,197 +59,228 @@ body{
 #welcome{
     min-height:100vh;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
     align-items:center;
-    padding:25px;
-}
-
-.welcome-box{
-    width:100%;
-    max-width:500px;
-    background:#fffdfc;
-    border:1px solid #eee1dc;
-    border-radius:30px;
-    padding:55px 30px;
+    justify-content:center;
     text-align:center;
-    box-shadow:0 15px 45px rgba(90,70,60,.07);
+    padding:30px;
 }
 
 .logo{
-    font-size:12px;
-    letter-spacing:4px;
-    color:#a99189;
-    font-weight:bold;
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    background:#e6e0d5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    margin-bottom:22px;
 }
 
-.welcome-heart{
-    font-size:48px;
-    margin:22px 0 10px;
-}
-
-.welcome-box h1{
+#welcome h1{
     font-size:38px;
-    margin:10px 0;
+    letter-spacing:3px;
+    margin:5px 0 12px;
+    color:#57544d;
 }
 
-.welcome-box p{
-    color:#9a8983;
-    line-height:1.7;
+#welcome p{
+    font-size:16px;
+    color:#858078;
+    margin-bottom:28px;
 }
 
-.lang-btn,
-.get-btn{
-    width:100%;
-    padding:15px;
-    margin-top:10px;
-    border-radius:14px;
-    border:1px solid #eadbd5;
-    background:#fdf5f2;
-    color:#514641;
-    font-weight:bold;
-    cursor:pointer;
+.enter-btn{
+    border:none;
+    background:#c9c1b2;
+    color:white;
+    padding:13px 30px;
+    border-radius:25px;
     font-size:15px;
 }
 
-.lang-btn:hover,
-.get-btn:hover{
-    background:#f7e6e1;
+.enter-btn:hover{
+    background:#b8ae9d;
 }
-
 
 /* ---------- MAIN ---------- */
 
 #main{
     display:none;
+    min-height:100vh;
 }
 
 header{
     text-align:center;
-    padding:60px 20px 35px;
+    padding:20px 20px 35px;
+}
+
+header .small-logo{
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 header h1{
-    font-size:38px;
-    margin:18px 0 10px;
+    margin:0;
+    color:#57544d;
+    letter-spacing:3px;
+    font-size:32px;
 }
 
-.subtitle{
-    color:#9a8983;
+header p{
+    margin-top:10px;
+    color:#858078;
 }
 
-.cards{
-    max-width:850px;
+/* ---------- PRODUCTS ---------- */
+
+.products{
+    max-width:900px;
     margin:auto;
-    padding:20px;
-    display:flex;
-    gap:20px;
+    padding:0 20px 60px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
 }
 
-.card{
-    flex:1;
-    background:#fffdfc;
-    border:1px solid #eee1dc;
+.product{
+    background:#fffdf9;
+    border:1px solid #e3ded4;
     border-radius:24px;
     padding:30px;
-    box-shadow:0 8px 25px rgba(90,70,60,.05);
-}
-
-.card-icon{
-    font-size:45px;
-}
-
-.tag{
-    margin-top:15px;
-    color:#b09288;
-    font-size:11px;
-    letter-spacing:2px;
-    font-weight:bold;
-}
-
-.card h2{
-    margin:10px 0;
-}
-
-.card p{
-    color:#8f817c;
-    line-height:1.7;
-    min-height:55px;
-}
-
-footer{
     text-align:center;
-    color:#aaa09c;
-    font-size:12px;
-    line-height:1.9;
-    padding:45px 20px 30px;
+    box-shadow:0 5px 20px rgba(100,90,70,.06);
 }
 
+.product-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 18px;
+    border-radius:20px;
+    background:#e8e3d9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+}
+
+.product h2{
+    margin:0 0 10px;
+    color:#5a574f;
+    font-size:21px;
+}
+
+.product p{
+    color:#88847c;
+    font-size:14px;
+    line-height:1.6;
+    min-height:45px;
+}
+
+.product button{
+    margin-top:12px;
+    border:none;
+    background:#bfc8bf;
+    color:white;
+    padding:11px 22px;
+    border-radius:22px;
+    font-size:14px;
+}
+
+.product button:hover{
+    background:#aeb9ae;
+}
 
 /* ---------- POPUP ---------- */
 
-.overlay{
+.popup{
     display:none;
     position:fixed;
     inset:0;
-    background:rgba(70,55,50,.35);
-    justify-content:center;
+    background:rgba(60,55,45,.35);
+    z-index:1000;
     align-items:center;
+    justify-content:center;
     padding:20px;
-    z-index:50;
 }
 
-.overlay.show{
-    display:flex;
-}
-
-.popup{
-    width:90%;
-    max-width:420px;
-    background:#fffdfc;
+.popup-box{
+    width:100%;
+    max-width:470px;
+    background:#fffdf9;
     border-radius:25px;
-    padding:32px;
+    padding:30px;
     text-align:center;
     position:relative;
-    box-shadow:0 20px 60px rgba(0,0,0,.15);
 }
 
 .close{
     position:absolute;
-    right:15px;
-    top:10px;
-    width:auto;
-    border:0;
+    right:18px;
+    top:15px;
+    border:none;
     background:none;
-    color:#9b8d88;
-    font-size:26px;
+    font-size:23px;
+    color:#8b877f;
 }
 
-.popup-icon{
-    font-size:45px;
+.popup-box h2{
+    margin-top:5px;
+    color:#59564f;
 }
 
-.popup p{
-    color:#95857f;
+.lang-pdf{
+    width:100%;
+    margin:9px 0;
+    padding:13px;
+    border:none;
+    border-radius:20px;
+    background:#ded8cc;
+    color:#514e47;
+    font-size:14px;
 }
 
+.lang-pdf:hover{
+    background:#cec6b7;
+}
 
-/* ---------- PDF DESIGN ---------- */
+/* ---------- FOOTER ---------- */
+
+footer{
+    text-align:center;
+    padding:25px 15px;
+    font-size:12px;
+    color:#99948b;
+}
+
+/* ---------- PDF ---------- */
+
+#pdfContainer{
+    position:fixed;
+    left:0;
+    top:0;
+    width:794px;
+    z-index:-1;
+    pointer-events:none;
+}
 
 .pdf{
     width:794px;
     min-height:1123px;
-    background:#fffdfc;
+    background:#fffdf9;
     padding:65px;
-    color:#514641;
+    color:#55534d;
     position:relative;
+    page-break-after:always;
 }
 
-.pdf + .pdf{
-    page-break-before:always;
+.pdf:last-child{
+    page-break-after:auto;
 }
 
 .pdf-cover{
-    min-height:993px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -224,80 +288,68 @@ footer{
     text-align:center;
 }
 
-.pdf-small-logo{
-    letter-spacing:5px;
-    font-size:13px;
-    color:#aa9188;
-    font-weight:bold;
-}
-
-.pdf-icon{
-    font-size:75px;
-    margin:25px 0 10px;
+.pdf-logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#e6e0d5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    margin-bottom:25px;
 }
 
 .pdf h1{
-    font-size:38px;
-    margin:10px 0 15px;
+    font-size:34px;
+    letter-spacing:2px;
+    margin:10px 0;
 }
 
 .pdf h2{
-    font-size:27px;
-    margin:0 0 25px;
+    font-size:25px;
+    margin-top:10px;
+    color:#67645c;
 }
 
-.pdf p{
+.pdf h3{
+    color:#77736b;
+}
+
+.pdf p,
+.pdf li{
     font-size:16px;
-    line-height:1.8;
+    line-height:1.7;
 }
 
-.pdf-intro{
-    color:#9b8982;
-    max-width:550px;
-    text-align:center;
-}
-
-.pdf-box{
-    background:#faf0ec;
-    border:1px solid #efddd7;
-    border-radius:20px;
-    padding:25px;
-    margin:20px 0;
-}
-
-.pdf-box h3{
-    margin-top:0;
-    font-size:19px;
-}
-
-.pdf-list{
-    line-height:2;
-    font-size:16px;
+.soft-box{
+    background:#f1eee7;
+    border-radius:18px;
+    padding:18px 22px;
+    margin:16px 0;
 }
 
 .check{
-    background:#fff8f5;
-    border:1px solid #eadbd5;
+    background:#f5f2eb;
     border-radius:14px;
-    padding:14px 18px;
-    margin:10px 0;
-    font-size:15px;
+    padding:13px 16px;
+    margin:9px 0;
 }
 
 .line{
-    border-bottom:1px solid #d9c8c1;
-    height:35px;
-    margin:5px 0 15px;
+    height:32px;
+    border-bottom:1px solid #d6d1c7;
+    margin-bottom:10px;
 }
 
 .pdf-footer{
     position:absolute;
-    bottom:35px;
+    bottom:28px;
     left:65px;
     right:65px;
     text-align:center;
-    color:#aaa09c;
     font-size:11px;
+    color:#aaa49a;
 }
 
 .ar{
@@ -305,308 +357,319 @@ footer{
     text-align:right;
 }
 
-.ar .pdf-cover{
-    text-align:center;
-}
-
-.ar .pdf-footer{
-    direction:rtl;
-}
-
-
-/* ---------- HIDDEN PDF AREA ---------- */
-
-#pdfContainer{
-    position:absolute;
-    left:-10000px;
-    top:0;
-}
-
-
 /* ---------- MOBILE ---------- */
 
-@media(max-width:700px){
+@media(max-width:600px){
 
-    .cards{
-        flex-direction:column;
+    #welcome h1{
+        font-size:30px;
     }
 
     header h1{
-        font-size:30px;
+        font-size:27px;
     }
 
-    .welcome-box h1{
-        font-size:30px;
+    .products{
+        grid-template-columns:1fr;
     }
 
+    .popup-box{
+        padding:25px 20px;
+    }
 }
 </style>
 </head>
 
-
 <body>
 
+<!-- LANGUAGE SELECTION -->
+<div class="language-bar" id="languageBar">
+    <button id="enBtn" onclick="setLanguage('en')">🇬🇧 English</button>
+    <button id="arBtn" onclick="setLanguage('ar')">🇦🇪 العربية</button>
+</div>
 
-<!-- ================= WELCOME ================= -->
 
+<!-- WELCOME -->
 <section id="welcome">
 
-<div class="welcome-box">
+    <div class="logo">♡</div>
 
-<div class="logo">LOVELY FILES</div>
+    <h1 id="welcomeTitle">LOVELY FILES</h1>
 
-<div class="welcome-heart">🤍</div>
+    <p id="welcomeText">
+        Simple things, made for you.
+    </p>
 
-<h1 id="welcomeTitle">Welcome</h1>
-
-<p id="welcomeText">
-Simple things, made for you.<br>
-Choose your language to continue.
-</p>
-
-<button class="lang-btn" onclick="setLanguage('en')">
-🇬🇧 English
-</button>
-
-<button class="lang-btn" onclick="setLanguage('ar')">
-🇦🇪 العربية
-</button>
-
-</div>
+    <button class="enter-btn" id="enterBtn" onclick="enterSite()">
+        Enter
+    </button>
 
 </section>
 
 
-
-<!-- ================= MAIN ================= -->
-
+<!-- MAIN SITE -->
 <section id="main">
 
 <header>
 
-<div class="logo">LOVELY FILES</div>
+    <div class="small-logo">♡</div>
 
-<h1 id="mainTitle">
-Simple things, made for you.
-</h1>
+    <h1>LOVELY FILES</h1>
 
-<p class="subtitle" id="mainSubtitle">
-Free digital files 🤍
-</p>
+    <p id="mainIntro">
+        Simple things, made for you.
+    </p>
 
 </header>
 
 
-<div class="cards">
+<div class="products">
+
+    <!-- HAIR -->
+    <div class="product">
+
+        <div class="product-icon">🌀</div>
+
+        <h2 id="hairTitle">
+            Curly Hair Guide
+        </h2>
+
+        <p id="hairDescription">
+            A simple guide to help you understand and care for your curls.
+        </p>
+
+        <button onclick="openProduct('hair')" id="hairButton">
+            View Guide
+        </button>
+
+    </div>
 
 
-<!-- HAIR -->
+    <!-- STUDY -->
+    <div class="product">
 
-<div class="card">
+        <div class="product-icon">📚</div>
 
-<div class="card-icon">🌀</div>
+        <h2 id="studyTitle">
+            Study Planner
+        </h2>
 
-<div class="tag" id="hairTag">
-DIGITAL GUIDE
-</div>
+        <p id="studyDescription">
+            A simple planner to organize your study time and goals.
+        </p>
 
-<h2 id="hairTitle">
-Curly Hair Guide
-</h2>
+        <button onclick="openProduct('study')" id="studyButton">
+            View Planner
+        </button>
 
-<p id="hairDescription">
-A simple and pretty guide for caring for curly hair.
-</p>
-
-<button class="get-btn" onclick="openProduct('hair')">
-<span id="hairButton">GET FILE →</span>
-</button>
-
-</div>
-
-
-<!-- STUDY -->
-
-<div class="card">
-
-<div class="card-icon">📚</div>
-
-<div class="tag" id="studyTag">
-DIGITAL PLANNER
-</div>
-
-<h2 id="studyTitle">
-Study Planner
-</h2>
-
-<p id="studyDescription">
-A simple planner to organize studying and school work.
-</p>
-
-<button class="get-btn" onclick="openProduct('study')">
-<span id="studyButton">GET FILE →</span>
-</button>
-
-</div>
+    </div>
 
 </div>
 
 
-<footer>
-
-<div id="freeText">
-Free digital downloads · No payment required
-</div>
-
-<div id="copyright">
-© 2026 Lovely Files. All rights reserved.<br>
-Made by Lojain Mohammad Mansour.
-</div>
-
+<footer id="footer">
+    © 2026 Lovely Files. All rights reserved.
+    Made by Lojain Mohammad Mansour.
 </footer>
 
 </section>
 
 
+<!-- POPUP -->
+<div class="popup" id="popup">
 
-<!-- ================= POPUP ================= -->
+    <div class="popup-box">
 
-<div class="overlay" id="popup">
+        <button class="close" onclick="closePopup()">×</button>
 
-<div class="popup">
+        <h2 id="popupTitle">Choose your PDF</h2>
 
-<button class="close" onclick="closePopup()">×</button>
+        <p id="popupText">
+            Choose the language of your file.
+        </p>
 
-<div class="popup-icon" id="popupIcon">🌀</div>
+        <button class="lang-pdf" onclick="makePDF('en')" id="pdfEnglish">
+            🇬🇧 Download English PDF
+        </button>
 
-<h2 id="popupTitle">
-Choose your language
-</h2>
+        <button class="lang-pdf" onclick="makePDF('ar')" id="pdfArabic">
+            🇦🇪 تحميل PDF بالعربي
+        </button>
 
-<p id="popupProduct">
-Curly Hair Guide
-</p>
-
-<button class="get-btn" onclick="makePDF('en')">
-🇬🇧 English PDF
-</button>
-
-<button class="get-btn" onclick="makePDF('ar')">
-🇦🇪 ملف عربي
-</button>
-
-</div>
+    </div>
 
 </div>
 
 
-
-<!-- ================= PDF CONTENT ================= -->
-
+<!-- PDF RENDER AREA -->
 <div id="pdfContainer"></div>
-
 
 
 <script>
 
-let siteLanguage="en";
-let selectedProduct="";
+let currentLanguage = "en";
+let currentProduct = "";
 
 
-/* ================= LANGUAGE ================= */
+/* =========================
+   LANGUAGE
+========================= */
 
 function setLanguage(lang){
 
-siteLanguage=lang;
+    currentLanguage = lang;
 
-document.getElementById("welcome").style.display="none";
-document.getElementById("main").style.display="block";
+    const enBtn = document.getElementById("enBtn");
+    const arBtn = document.getElementById("arBtn");
 
-if(lang==="ar"){
+    enBtn.classList.remove("active");
+    arBtn.classList.remove("active");
 
-document.documentElement.lang="ar";
+    if(lang === "en"){
 
-document.getElementById("mainTitle").innerText=
-"أشياء بسيطة، صُنعت لكِ.";
+        enBtn.classList.add("active");
 
-document.getElementById("mainSubtitle").innerText=
-"ملفات رقمية مجانية 🤍";
+        document.documentElement.lang = "en";
 
-document.getElementById("hairTag").innerText=
-"دليل رقمي";
+        document.getElementById("welcomeText").textContent =
+            "Simple things, made for you.";
 
-document.getElementById("hairTitle").innerText=
-"دليل الشعر الكيرلي";
+        document.getElementById("enterBtn").textContent =
+            "Enter";
 
-document.getElementById("hairDescription").innerText=
-"دليل بسيط ولطيف للعناية بالشعر الكيرلي.";
+        document.getElementById("mainIntro").textContent =
+            "Simple things, made for you.";
 
-document.getElementById("hairButton").innerText=
-"احصلي على الملف ←";
+        document.getElementById("hairTitle").textContent =
+            "Curly Hair Guide";
 
-document.getElementById("studyTag").innerText=
-"مخطط رقمي";
+        document.getElementById("hairDescription").textContent =
+            "A simple guide to help you understand and care for your curls.";
 
-document.getElementById("studyTitle").innerText=
-"مخطط الدراسة";
+        document.getElementById("hairButton").textContent =
+            "View Guide";
 
-document.getElementById("studyDescription").innerText=
-"مخطط بسيط لتنظيم الدراسة والواجبات.";
+        document.getElementById("studyTitle").textContent =
+            "Study Planner";
 
-document.getElementById("studyButton").innerText=
-"احصلي على الملف ←";
+        document.getElementById("studyDescription").textContent =
+            "A simple planner to organize your study time and goals.";
 
-document.getElementById("freeText").innerText=
-"ملفات رقمية مجانية · بدون دفع";
+        document.getElementById("studyButton").textContent =
+            "View Planner";
 
-document.getElementById("copyright").innerHTML=
-"© 2026 Lovely Files. جميع الحقوق محفوظة.<br>"+
-"صنع بواسطة لجين محمد منصور.";
+        document.getElementById("footer").textContent =
+            "© 2026 Lovely Files. All rights reserved. Made by Lojain Mohammad Mansour.";
 
+    }else{
+
+        arBtn.classList.add("active");
+
+        document.documentElement.lang = "ar";
+
+        document.getElementById("welcomeText").textContent =
+            "أشياء بسيطة، صُنعت من أجلك.";
+
+        document.getElementById("enterBtn").textContent =
+            "دخول";
+
+        document.getElementById("mainIntro").textContent =
+            "أشياء بسيطة، صُنعت من أجلك.";
+
+        document.getElementById("hairTitle").textContent =
+            "دليل الشعر الكيرلي";
+
+        document.getElementById("hairDescription").textContent =
+            "دليل بسيط يساعدك على فهم شعرك الكيرلي والعناية به.";
+
+        document.getElementById("hairButton").textContent =
+            "عرض الدليل";
+
+        document.getElementById("studyTitle").textContent =
+            "مخطط الدراسة";
+
+        document.getElementById("studyDescription").textContent =
+            "مخطط بسيط لتنظيم وقت الدراسة والأهداف.";
+
+        document.getElementById("studyButton").textContent =
+            "عرض المخطط";
+
+        document.getElementById("footer").textContent =
+            "© 2026 Lovely Files. جميع الحقوق محفوظة. صنع بواسطة لجين محمد منصور.";
+    }
 }
 
+
+/* =========================
+   ENTER
+========================= */
+
+function enterSite(){
+
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("main").style.display = "block";
+
+    window.scrollTo(0,0);
 }
 
 
-/* ================= PRODUCT ================= */
+/* =========================
+   PRODUCT POPUP
+========================= */
 
 function openProduct(product){
 
-selectedProduct=product;
+    currentProduct = product;
 
-document.getElementById("popup").classList.add("show");
+    const title = document.getElementById("popupTitle");
+    const text = document.getElementById("popupText");
 
-if(product==="hair"){
+    if(currentLanguage === "en"){
 
-document.getElementById("popupIcon").innerText="🌀";
+        title.textContent =
+            product === "hair"
+            ? "Curly Hair Guide"
+            : "Study Planner";
 
-document.getElementById("popupProduct").innerText=
-siteLanguage==="ar"
-?"دليل الشعر الكيرلي"
-:"Curly Hair Guide";
+        text.textContent =
+            "Choose the language of your PDF.";
 
-}else{
+        document.getElementById("pdfEnglish").textContent =
+            "🇬🇧 Download English PDF";
 
-document.getElementById("popupIcon").innerText="📚";
+        document.getElementById("pdfArabic").textContent =
+            "🇦🇪 Download Arabic PDF";
 
-document.getElementById("popupProduct").innerText=
-siteLanguage==="ar"
-?"مخطط الدراسة"
-:"Study Planner";
+    }else{
 
-}
+        title.textContent =
+            product === "hair"
+            ? "دليل الشعر الكيرلي"
+            : "مخطط الدراسة";
 
+        text.textContent =
+            "اختاري لغة ملف الـPDF.";
+
+        document.getElementById("pdfEnglish").textContent =
+            "🇬🇧 تحميل PDF بالإنجليزي";
+
+        document.getElementById("pdfArabic").textContent =
+            "🇦🇪 تحميل PDF بالعربي";
+    }
+
+    document.getElementById("popup").style.display = "flex";
 }
 
 
 function closePopup(){
 
-document.getElementById("popup").classList.remove("show");
-
+    document.getElementById("popup").style.display = "none";
 }
 
 
-/* ================= HAIR ENGLISH ================= */
+/* =========================
+   HAIR — ENGLISH
+========================= */
 
 function hairEnglish(){
 
@@ -614,179 +677,183 @@ return `
 
 <div class="pdf pdf-cover">
 
-<div class="pdf-small-logo">
-LOVELY FILES
-</div>
+    <div class="pdf-logo">🌀</div>
 
-<div class="pdf-icon">🌀</div>
+    <h1>LOVELY FILES</h1>
 
-<h1>The Curly Hair Guide</h1>
+    <h2>Curly Hair Guide</h2>
 
-<p class="pdf-intro">
-A simple, soft guide for understanding,
-caring for and styling curly hair.
-</p>
+    <p>
+        A simple guide to help you understand,
+        care for and style your curls.
+    </p>
 
-<div class="pdf-footer">
-Made by Lojain Mohammad Mansour
-</div>
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>01 · Know Your Curls</h2>
+    <h2>Know Your Curls</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        Your curls are unique. The goal is not to make
+        every curl look the same, but to understand
+        what your hair needs.
+    </div>
 
-<h3>Your curls are unique 🤍</h3>
+    <h3>Notice your hair:</h3>
 
-<p>
-Curly hair can be loose, wavy, curly or coily.
-There is no single perfect curl pattern.
-The most important thing is learning what
-works well for your own hair.
-</p>
+    <div class="check">☐ Is my hair fine or thick?</div>
+    <div class="check">☐ Does my hair get dry easily?</div>
+    <div class="check">☐ Does my hair need more moisture?</div>
+    <div class="check">☐ How much does my hair shrink?</div>
 
-</div>
-
-<p>
-Look at how your hair behaves after washing,
-how much moisture it needs and how easily
-it gets tangled or frizzy.
-</p>
-
-<div class="pdf-footer">LOVELY FILES · Curly Hair Guide</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>02 · Wash Day</h2>
+    <h2>Wash Day</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        <h3>1. Cleanse</h3>
+        <p>
+            Gently clean your scalp and hair without
+            being too rough.
+        </p>
+    </div>
 
-<h3>A simple routine</h3>
+    <div class="soft-box">
+        <h3>2. Condition</h3>
+        <p>
+            Use conditioner to make your hair softer
+            and easier to detangle.
+        </p>
+    </div>
 
-<div class="pdf-list">
-1. Wet your hair completely.<br>
-2. Clean your scalp gently with shampoo.<br>
-3. Apply conditioner to the lengths.<br>
-4. Detangle gently from the ends upward.<br>
-5. Rinse without rough rubbing.
-</div>
+    <div class="soft-box">
+        <h3>3. Detangle</h3>
+        <p>
+            Detangle gently, preferably while your
+            hair has conditioner in it.
+        </p>
+    </div>
 
-</div>
-
-<p>
-Try to be gentle with your curls.
-Rough rubbing can make frizz worse.
-</p>
-
-<div class="pdf-footer">LOVELY FILES</div>
-
-</div>
-
-
-<div class="pdf">
-
-<h2>03 · Styling Routine</h2>
-
-<div class="pdf-box">
-
-<h3>Simple product order</h3>
-
-<div class="pdf-list">
-1. Leave-in conditioner<br>
-2. Curl cream or styling product<br>
-3. Scrunch your curls upward<br>
-4. Let them dry gently
-</div>
-
-</div>
-
-<p>
-Use a small amount of product first.
-You can always add more if needed.
-</p>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>04 · Drying Your Curls</h2>
+    <h2>Styling Routine</h2>
 
-<div class="pdf-box">
+    <div class="check">☐ Start with wet or very damp hair</div>
+    <div class="check">☐ Apply your leave-in product</div>
+    <div class="check">☐ Add your styling product</div>
+    <div class="check">☐ Scrunch your curls gently</div>
+    <div class="check">☐ Let your curls form naturally</div>
 
-<h3>Keep it gentle</h3>
+    <div class="soft-box">
+        Tip: Try not to touch your curls too much
+        while they are drying.
+    </div>
 
-<p>
-You can air-dry your hair or use a diffuser
-on a gentle setting.
-</p>
-
-</div>
-
-<p>
-Try not to touch or separate your curls too
-much while they are drying. This can help
-reduce frizz.
-</p>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>05 · Common Mistakes</h2>
+    <h2>Drying Your Curls</h2>
 
-<div class="check">□ Brushing dry curls</div>
+    <p>
+        You can air-dry your curls or use a diffuser
+        on a gentle setting.
+    </p>
 
-<div class="check">□ Using too much product</div>
+    <div class="check">☐ Do not rub your hair roughly</div>
+    <div class="check">☐ Use a soft towel or cotton T-shirt</div>
+    <div class="check">☐ Avoid touching curls while drying</div>
+    <div class="check">☐ Let your hair dry completely</div>
 
-<div class="check">□ Roughly drying with a towel</div>
-
-<div class="check">□ Touching curls while they dry</div>
-
-<div class="check">□ Forgetting conditioner</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>06 · Quick Curl Checklist</h2>
+    <h2>Common Mistakes</h2>
 
-<div class="check">□ Gentle wash</div>
-<div class="check">□ Conditioner</div>
-<div class="check">□ Gentle detangling</div>
-<div class="check">□ Leave-in</div>
-<div class="check">□ Styling product</div>
-<div class="check">□ Scrunch</div>
-<div class="check">□ Gentle drying</div>
-<div class="check">□ Protect curls at night</div>
+    <div class="check">
+        ✕ Brushing dry curls roughly
+    </div>
 
-<div class="pdf-footer">
-Made by Lojain Mohammad Mansour
+    <div class="check">
+        ✕ Using too much product
+    </div>
+
+    <div class="check">
+        ✕ Touching curls constantly while drying
+    </div>
+
+    <div class="check">
+        ✕ Using very hot air
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
+
 </div>
+
+
+<div class="pdf">
+
+    <h2>Quick Curl Checklist</h2>
+
+    <div class="check">☐ Cleanse</div>
+    <div class="check">☐ Condition</div>
+    <div class="check">☐ Detangle</div>
+    <div class="check">☐ Style</div>
+    <div class="check">☐ Scrunch</div>
+    <div class="check">☐ Dry gently</div>
+    <div class="check">☐ Enjoy your curls ♡</div>
+
+    <div class="soft-box">
+        Your curls do not need to be perfect.
+        They just need care.
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 `;
-
 }
 
 
-/* ================= HAIR ARABIC ================= */
+/* =========================
+   HAIR — ARABIC
+========================= */
 
 function hairArabic(){
 
@@ -794,178 +861,171 @@ return `
 
 <div class="pdf pdf-cover ar">
 
-<div class="pdf-small-logo">
-LOVELY FILES
-</div>
+    <div class="pdf-logo">🌀</div>
 
-<div class="pdf-icon">🌀</div>
+    <h1>LOVELY FILES</h1>
 
-<h1>دليل الشعر الكيرلي</h1>
+    <h2>دليل الشعر الكيرلي</h2>
 
-<p class="pdf-intro">
-دليل بسيط ولطيف لفهم الشعر الكيرلي
-والعناية به وتصفيفه.
-</p>
+    <p>
+        دليل بسيط يساعدك على فهم شعرك الكيرلي
+        والعناية به وتصفيفه.
+    </p>
 
-<div class="pdf-footer">
-صنع بواسطة لجين محمد منصور
-</div>
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠١ · تعرّفي على شعرك</h2>
+    <h2>اعرفي شعرك الكيرلي</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        شعرك مميز بطبيعته. الهدف ليس أن تبدو
+        كل خصلة مثل الأخرى، بل أن تعرفي ما يحتاجه شعرك.
+    </div>
 
-<h3>شعرك مميز 🤍</h3>
+    <h3>لاحظي شعرك:</h3>
 
-<p>
-الشعر الكيرلي يختلف من شخص لآخر.
-قد يكون مموجًا أو كيرلي أو ملفوفًا.
-لا يوجد نوع مثالي واحد، والأهم هو معرفة
-ما يناسب شعرك أنتِ.
-</p>
+    <div class="check">☐ هل شعري خفيف أم كثيف؟</div>
+    <div class="check">☐ هل يجف شعري بسهولة؟</div>
+    <div class="check">☐ هل يحتاج شعري إلى ترطيب أكثر؟</div>
+    <div class="check">☐ كم ينكمش شعري بعد أن يجف؟</div>
 
-</div>
-
-<p>
-لاحظي كيف يتصرف شعرك بعد الغسيل،
-وكم يحتاج من الترطيب، ومدى تشابكه أو
-ظهور الهيشان فيه.
-</p>
-
-<div class="pdf-footer">LOVELY FILES · دليل الشعر الكيرلي</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٢ · يوم الغسيل</h2>
+    <h2>يوم غسل الشعر</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        <h3>١. التنظيف</h3>
+        <p>
+            نظفي فروة الرأس والشعر بلطف
+            ومن دون فرك قوي.
+        </p>
+    </div>
 
-<h3>روتين بسيط</h3>
+    <div class="soft-box">
+        <h3>٢. البلسم</h3>
+        <p>
+            استخدمي البلسم لجعل الشعر أنعم
+            وأسهل في فك التشابك.
+        </p>
+    </div>
 
-<div class="pdf-list">
-١. بللي شعرك جيدًا.<br>
-٢. نظفي فروة الرأس بلطف بالشامبو.<br>
-٣. ضعي البلسم على أطوال الشعر.<br>
-٤. فكّي التشابك من الأطراف إلى الأعلى.<br>
-٥. اشطفي الشعر بدون فرك قوي.
-</div>
+    <div class="soft-box">
+        <h3>٣. فك التشابك</h3>
+        <p>
+            فكّي التشابك بلطف، ويفضل أثناء
+            وجود البلسم على الشعر.
+        </p>
+    </div>
 
-</div>
-
-<p>
-كوني لطيفة مع شعرك، لأن الفرك القوي
-قد يزيد الهيشان.
-</p>
-
-<div class="pdf-footer">LOVELY FILES</div>
-
-</div>
-
-
-<div class="pdf ar">
-
-<h2>٠٣ · روتين التصفيف</h2>
-
-<div class="pdf-box">
-
-<h3>ترتيب بسيط للمنتجات</h3>
-
-<div class="pdf-list">
-١. ليف إن<br>
-٢. كريم كيرلي أو منتج تصفيف<br>
-٣. اعصري الخصلات للأعلى بلطف<br>
-٤. اتركي الشعر يجف بلطف
-</div>
-
-</div>
-
-<p>
-ابدئي بكمية صغيرة من المنتج، ويمكنك
-إضافة المزيد إذا احتجتِ.
-</p>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٤ · تجفيف الشعر</h2>
+    <h2>روتين التصفيف</h2>
 
-<div class="pdf-box">
+    <div class="check">☐ ابدئي بشعر مبلل أو رطب جداً</div>
+    <div class="check">☐ ضعي منتج الـLeave-in</div>
+    <div class="check">☐ أضيفي منتج التصفيف</div>
+    <div class="check">☐ اعصري الخصل بلطف</div>
+    <div class="check">☐ اتركي الخصل تتشكل بشكل طبيعي</div>
 
-<h3>خليه لطيف</h3>
+    <div class="soft-box">
+        نصيحة: حاولي ألا تلمسي شعرك كثيراً
+        أثناء جفافه.
+    </div>
 
-<p>
-يمكنك ترك الشعر يجف في الهواء أو استخدام
-الديفيوزر بدرجة لطيفة.
-</p>
-
-</div>
-
-<p>
-حاولي عدم لمس أو تفريق الخصلات كثيرًا
-أثناء جفافها، فهذا قد يساعد على تقليل الهيشان.
-</p>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٥ · أخطاء شائعة</h2>
+    <h2>تجفيف الشعر الكيرلي</h2>
 
-<div class="check">□ تمشيط الشعر وهو جاف</div>
+    <p>
+        يمكنك ترك شعرك ليجف في الهواء أو استخدام
+        الديفيوزر على درجة لطيفة.
+    </p>
 
-<div class="check">□ استخدام كمية كبيرة من المنتج</div>
+    <div class="check">☐ لا تفركي شعرك بقوة</div>
+    <div class="check">☐ استخدمي منشفة ناعمة أو قميصاً قطنياً</div>
+    <div class="check">☐ تجنبي لمس الخصل أثناء التجفيف</div>
+    <div class="check">☐ اتركي الشعر يجف تماماً</div>
 
-<div class="check">□ تجفيف الشعر بعنف بالمنشفة</div>
-
-<div class="check">□ لمس الخصلات أثناء جفافها</div>
-
-<div class="check">□ نسيان البلسم</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٦ · قائمة سريعة</h2>
+    <h2>أخطاء شائعة</h2>
 
-<div class="check">□ غسيل لطيف</div>
-<div class="check">□ بلسم</div>
-<div class="check">□ فك التشابك بلطف</div>
-<div class="check">□ ليف إن</div>
-<div class="check">□ منتج تصفيف</div>
-<div class="check">□ عصر الخصلات</div>
-<div class="check">□ تجفيف لطيف</div>
-<div class="check">□ حماية الشعر أثناء النوم</div>
+    <div class="check">✕ تمشيط الشعر الجاف بعنف</div>
+    <div class="check">✕ استخدام كمية كبيرة من المنتجات</div>
+    <div class="check">✕ لمس الخصل باستمرار أثناء التجفيف</div>
+    <div class="check">✕ استخدام حرارة عالية جداً</div>
 
-<div class="pdf-footer">
-صنع بواسطة لجين محمد منصور
+    <div class="pdf-footer">
+        Lovely Files • Curly Hair Guide
+    </div>
+
 </div>
+
+
+<div class="pdf ar">
+
+    <h2>قائمة سريعة للعناية بالكيرلز</h2>
+
+    <div class="check">☐ تنظيف الشعر</div>
+    <div class="check">☐ استخدام البلسم</div>
+    <div class="check">☐ فك التشابك</div>
+    <div class="check">☐ التصفيف</div>
+    <div class="check">☐ عصر الخصل</div>
+    <div class="check">☐ التجفيف بلطف</div>
+    <div class="check">☐ الاستمتاع بكيرلزك ♡</div>
+
+    <div class="soft-box">
+        شعرك لا يحتاج أن يكون مثالياً،
+        بل يحتاج إلى العناية فقط.
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 `;
-
 }
 
 
-/* ================= STUDY ENGLISH ================= */
+/* =========================
+   STUDY — ENGLISH
+========================= */
 
 function studyEnglish(){
 
@@ -973,169 +1033,181 @@ return `
 
 <div class="pdf pdf-cover">
 
-<div class="pdf-small-logo">LOVELY FILES</div>
+    <div class="pdf-logo">📚</div>
 
-<div class="pdf-icon">📚</div>
+    <h1>LOVELY FILES</h1>
 
-<h1>The Study Planner</h1>
+    <h2>Study Planner</h2>
 
-<p class="pdf-intro">
-A soft and simple planner for school,
-studying and staying organized.
-</p>
+    <p>
+        A simple planner to organize your study time,
+        tasks and goals.
+    </p>
 
-<div class="pdf-footer">
-Made by Lojain Mohammad Mansour
-</div>
-
-</div>
-
-
-<div class="pdf">
-
-<h2>01 · Today's Goals</h2>
-
-<div class="pdf-box">
-
-<h3>What do you want to finish today?</h3>
-
-<div class="check">1. ______________________________</div>
-<div class="check">2. ______________________________</div>
-<div class="check">3. ______________________________</div>
-
-</div>
-
-<h2>To-Do List</h2>
-
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>02 · Study Sessions</h2>
+    <h2>Today's Goals</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        <h3>My main goal today:</h3>
+        <div class="line"></div>
+    </div>
 
-<h3>Session 01</h3>
+    <div class="soft-box">
+        <h3>What I want to finish:</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
 
-<p>Subject: __________________________</p>
-<p>Time: _____________________________</p>
-<p>Topic: ____________________________</p>
-
-</div>
-
-<div class="pdf-box">
-
-<h3>Session 02</h3>
-
-<p>Subject: __________________________</p>
-<p>Time: _____________________________</p>
-<p>Topic: ____________________________</p>
-
-</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>03 · Homework</h2>
+    <h2>To-Do List</h2>
 
-<div class="pdf-box">
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
 
-<h3>Homework 01</h3>
-
-<p>Subject: __________________________</p>
-<p>Task: _____________________________</p>
-<p>Due date: _________________________</p>
-
-</div>
-
-<div class="pdf-box">
-
-<h3>Homework 02</h3>
-
-<p>Subject: __________________________</p>
-<p>Task: _____________________________</p>
-<p>Due date: _________________________</p>
-
-</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>04 · Exam Prep</h2>
+    <h2>Study Sessions</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        <h3>Session 1</h3>
+        <p>Subject: __________________________</p>
+        <p>Time: _____________________________</p>
+    </div>
 
-<h3>Exam Information</h3>
+    <div class="soft-box">
+        <h3>Session 2</h3>
+        <p>Subject: __________________________</p>
+        <p>Time: _____________________________</p>
+    </div>
 
-<p>Exam: ____________________________</p>
-<p>Date: ____________________________</p>
+    <div class="soft-box">
+        <h3>Session 3</h3>
+        <p>Subject: __________________________</p>
+        <p>Time: _____________________________</p>
+    </div>
 
-</div>
-
-<h3>Topics to Review</h3>
-
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
 
 <div class="pdf">
 
-<h2>05 · Daily Reflection</h2>
+    <h2>Homework</h2>
 
-<div class="pdf-box">
+    <div class="check">
+        Subject: __________________________
+        <br>
+        Homework: _________________________
+        <br>
+        Due: ______________________________
+    </div>
 
-<h3>What did I finish today?</h3>
+    <div class="check">
+        Subject: __________________________
+        <br>
+        Homework: _________________________
+        <br>
+        Due: ______________________________
+    </div>
 
-<div class="line"></div>
-<div class="line"></div>
-<div class="line"></div>
+    <div class="check">
+        Subject: __________________________
+        <br>
+        Homework: _________________________
+        <br>
+        Due: ______________________________
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
-<div class="pdf-box">
 
-<h3>What should I do tomorrow?</h3>
+<div class="pdf">
 
-<div class="line"></div>
-<div class="line"></div>
-<div class="line"></div>
+    <h2>Exam Prep</h2>
+
+    <div class="check">☐ Review notes</div>
+    <div class="check">☐ Study important topics</div>
+    <div class="check">☐ Practice questions</div>
+    <div class="check">☐ Review mistakes</div>
+    <div class="check">☐ Take a short break</div>
+    <div class="check">☐ Get enough sleep</div>
+
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
-<div class="pdf-footer">
-Made by Lojain Mohammad Mansour
-</div>
+
+<div class="pdf">
+
+    <h2>Daily Reflection</h2>
+
+    <div class="soft-box">
+        <h3>What did I learn today?</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="soft-box">
+        <h3>What went well?</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="soft-box">
+        <h3>What can I improve tomorrow?</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 `;
-
 }
 
 
-/* ================= STUDY ARABIC ================= */
+/* =========================
+   STUDY — ARABIC
+========================= */
 
 function studyArabic(){
 
@@ -1143,279 +1215,299 @@ return `
 
 <div class="pdf pdf-cover ar">
 
-<div class="pdf-small-logo">LOVELY FILES</div>
+    <div class="pdf-logo">📚</div>
 
-<div class="pdf-icon">📚</div>
+    <h1>LOVELY FILES</h1>
 
-<h1>مخطط الدراسة</h1>
+    <h2>مخطط الدراسة</h2>
 
-<p class="pdf-intro">
-مخطط بسيط ولطيف لتنظيم المدرسة
-والدراسة والمهام.
-</p>
+    <p>
+        مخطط بسيط لتنظيم وقت الدراسة
+        والمهام والأهداف.
+    </p>
 
-<div class="pdf-footer">
-صنع بواسطة لجين محمد منصور
-</div>
-
-</div>
-
-
-<div class="pdf ar">
-
-<h2>٠١ · أهداف اليوم</h2>
-
-<div class="pdf-box">
-
-<h3>ماذا تريدين أن تنجزي اليوم؟</h3>
-
-<div class="check">١. ______________________________</div>
-<div class="check">٢. ______________________________</div>
-<div class="check">٣. ______________________________</div>
-
-</div>
-
-<h2>قائمة المهام</h2>
-
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٢ · جلسات الدراسة</h2>
+    <h2>أهداف اليوم</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        <h3>هدفي الرئيسي اليوم:</h3>
+        <div class="line"></div>
+    </div>
 
-<h3>الجلسة الأولى</h3>
+    <div class="soft-box">
+        <h3>ما الذي أريد إنجازه؟</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
 
-<p>المادة: __________________________</p>
-<p>الوقت: __________________________</p>
-<p>الموضوع: _______________________</p>
-
-</div>
-
-<div class="pdf-box">
-
-<h3>الجلسة الثانية</h3>
-
-<p>المادة: __________________________</p>
-<p>الوقت: __________________________</p>
-<p>الموضوع: _______________________</p>
-
-</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٣ · الواجبات</h2>
+    <h2>قائمة المهام</h2>
 
-<div class="pdf-box">
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
+    <div class="check">☐ ______________________________</div>
 
-<h3>الواجب الأول</h3>
-
-<p>المادة: __________________________</p>
-<p>المهمة: _________________________</p>
-<p>موعد التسليم: ___________________</p>
-
-</div>
-
-<div class="pdf-box">
-
-<h3>الواجب الثاني</h3>
-
-<p>المادة: __________________________</p>
-<p>المهمة: _________________________</p>
-<p>موعد التسليم: ___________________</p>
-
-</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٤ · الاستعداد للاختبار</h2>
+    <h2>جلسات الدراسة</h2>
 
-<div class="pdf-box">
+    <div class="soft-box">
+        <h3>الجلسة الأولى</h3>
+        <p>المادة: __________________________</p>
+        <p>الوقت: ___________________________</p>
+    </div>
 
-<h3>معلومات الاختبار</h3>
+    <div class="soft-box">
+        <h3>الجلسة الثانية</h3>
+        <p>المادة: __________________________</p>
+        <p>الوقت: ___________________________</p>
+    </div>
 
-<p>الاختبار: _______________________</p>
-<p>التاريخ: ________________________</p>
+    <div class="soft-box">
+        <h3>الجلسة الثالثة</h3>
+        <p>المادة: __________________________</p>
+        <p>الوقت: ___________________________</p>
+    </div>
 
-</div>
-
-<h3>المواضيع للمراجعة</h3>
-
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-<div class="check">□ ______________________________</div>
-
-<div class="pdf-footer">LOVELY FILES</div>
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
 
 <div class="pdf ar">
 
-<h2>٠٥ · مراجعة اليوم</h2>
+    <h2>الواجبات</h2>
 
-<div class="pdf-box">
+    <div class="check">
+        المادة: __________________________
+        <br>
+        الواجب: __________________________
+        <br>
+        موعد التسليم: ____________________
+    </div>
 
-<h3>ماذا أنجزت اليوم؟</h3>
+    <div class="check">
+        المادة: __________________________
+        <br>
+        الواجب: __________________________
+        <br>
+        موعد التسليم: ____________________
+    </div>
 
-<div class="line"></div>
-<div class="line"></div>
-<div class="line"></div>
+    <div class="check">
+        المادة: __________________________
+        <br>
+        الواجب: __________________________
+        <br>
+        موعد التسليم: ____________________
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
-<div class="pdf-box">
 
-<h3>ماذا سأفعل غدًا؟</h3>
+<div class="pdf ar">
 
-<div class="line"></div>
-<div class="line"></div>
-<div class="line"></div>
+    <h2>الاستعداد للاختبار</h2>
+
+    <div class="check">☐ مراجعة الملاحظات</div>
+    <div class="check">☐ دراسة المواضيع المهمة</div>
+    <div class="check">☐ حل أسئلة تدريبية</div>
+    <div class="check">☐ مراجعة الأخطاء</div>
+    <div class="check">☐ أخذ استراحة قصيرة</div>
+    <div class="check">☐ الحصول على نوم كافٍ</div>
+
+    <div class="pdf-footer">
+        Lovely Files • Study Planner
+    </div>
 
 </div>
 
-<div class="pdf-footer">
-صنع بواسطة لجين محمد منصور
-</div>
+
+<div class="pdf ar">
+
+    <h2>مراجعة اليوم</h2>
+
+    <div class="soft-box">
+        <h3>ماذا تعلمت اليوم؟</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="soft-box">
+        <h3>ما الذي سار بشكل جيد؟</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="soft-box">
+        <h3>ماذا أستطيع أن أحسن غداً؟</h3>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="pdf-footer">
+        Lovely Files • 2026
+    </div>
 
 </div>
 
 `;
-
 }
 
 
-/* ================= CREATE PDF ================= */
+/* =========================
+   CREATE PDF
+========================= */
 
 async function makePDF(language){
 
-let html="";
+    const container = document.getElementById("pdfContainer");
 
-if(selectedProduct==="hair"){
+    let html = "";
 
-html=
-language==="en"
-?hairEnglish()
-:hairArabic();
+    if(currentProduct === "hair"){
 
-}else{
+        html = language === "en"
+            ? hairEnglish()
+            : hairArabic();
 
-html=
-language==="en"
-?studyEnglish()
-:studyArabic();
+    }else{
 
+        html = language === "en"
+            ? studyEnglish()
+            : studyArabic();
+    }
+
+    container.innerHTML = html;
+
+    /* Make the PDF area visible for html2canvas */
+    container.style.position = "fixed";
+    container.style.left = "0";
+    container.style.top = "0";
+    container.style.width = "794px";
+    container.style.zIndex = "9999";
+    container.style.visibility = "visible";
+    container.style.opacity = "1";
+    container.style.pointerEvents = "none";
+
+    document.body.style.overflow = "hidden";
+
+    /* Give the browser time to render everything */
+    await new Promise(resolve => setTimeout(resolve,1000));
+
+    const filename =
+        currentProduct === "hair"
+        ? (language === "en"
+            ? "Lovely-Files-Curly-Hair-Guide-English.pdf"
+            : "Lovely-Files-Curly-Hair-Guide-Arabic.pdf")
+        : (language === "en"
+            ? "Lovely-Files-Study-Planner-English.pdf"
+            : "Lovely-Files-Study-Planner-Arabic.pdf");
+
+
+    const options = {
+
+        margin:0,
+
+        filename:filename,
+
+        image:{
+            type:"jpeg",
+            quality:0.98
+        },
+
+        html2canvas:{
+            scale:2,
+            useCORS:true,
+            backgroundColor:"#fffdf9",
+            logging:false
+        },
+
+        jsPDF:{
+            unit:"mm",
+            format:"a4",
+            orientation:"portrait"
+        },
+
+        pagebreak:{
+            mode:["css","legacy"]
+        }
+    };
+
+
+    try{
+
+        await html2pdf()
+            .set(options)
+            .from(container)
+            .save();
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            language === "en"
+            ? "Something went wrong while creating the PDF."
+            : "حدث خطأ أثناء إنشاء ملف الـPDF."
+        );
+
+    }
+
+
+    /* Reset */
+
+    container.innerHTML = "";
+
+    container.style.position = "";
+    container.style.left = "";
+    container.style.top = "";
+    container.style.width = "";
+    container.style.zIndex = "";
+    container.style.visibility = "";
+    container.style.opacity = "";
+    container.style.pointerEvents = "";
+
+    document.body.style.overflow = "";
+
+    closePopup();
 }
 
 
-const container=document.getElementById("pdfContainer");
-
-container.innerHTML=html;
-
-
-/*
-Wait a moment so the browser
-can finish rendering the pages.
-*/
-
-await new Promise(resolve=>setTimeout(resolve,500));
-
-
-let filename="";
-
-
-if(selectedProduct==="hair"){
-
-filename=
-language==="en"
-?"Curly-Hair-Guide-English.pdf"
-:"دليل-الشعر-الكيرلي-عربي.pdf";
-
-}else{
-
-filename=
-language==="en"
-?"Study-Planner-English.pdf"
-:"مخطط-الدراسة-عربي.pdf";
-
-}
-
-
-const options={
-
-margin:0,
-
-filename:filename,
-
-image:{
-type:"jpeg",
-quality:.98
-},
-
-html2canvas:{
-scale:2,
-useCORS:true,
-backgroundColor:"#fffdfc"
-},
-
-jsPDF:{
-unit:"mm",
-format:"a4",
-orientation:"portrait"
-},
-
-pagebreak:{
-mode:["css","legacy"]
-}
-
-};
-
-
-try{
-
-await html2pdf()
-.from(container)
-.set(options)
-.save();
-
-}catch(error){
-
-alert(
-language==="ar"
-?"حدث خطأ أثناء إنشاء الملف. حاولي مرة أخرى."
-:"Something went wrong while creating the PDF. Please try again."
-);
-
-console.error(error);
-
-}
-
-
-container.innerHTML="";
-
-closePopup();
-
-}
+/* Start in English */
+setLanguage("en");
 
 </script>
 
