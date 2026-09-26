@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lovely Files</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #faf7f5;
+    color: #302927;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 35px;
+}
+
+.logo {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #8b7770;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 38px;
+    margin: 18px 0 10px;
+}
+
+.subtitle {
+    color: #8b817d;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #eee4df;
+    border-radius: 22px;
+    padding: 30px;
+    flex: 1;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.icon {
+    font-size: 45px;
+}
+
+.tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #a28d86;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+.description {
+    color: #817773;
+    line-height: 1.6;
+    min-height: 50px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 12px;
+
+    background: #302927;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #51433e;
+}
+
+footer {
+    text-align: center;
+    color: #aaa09c;
+    font-size: 12px;
+    padding: 35px;
+}
+
+
+/* POPUP */
+
+.overlay {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(30,25,22,0.5);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.popup {
+    background: white;
+
+    width: 90%;
+    max-width: 420px;
+
+    border-radius: 22px;
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+
+    width: auto;
+
+    background: none;
+    color: #888;
+
+    font-size: 25px;
+}
+
+.language {
+    margin-top: 10px;
+
+    background: white;
+    color: #302927;
+
+    border: 1px solid #ddd;
+}
+
+.language:hover {
+    background: #f8f0ed;
+}
+
+.back {
+    margin-top: 10px;
+}
+
+.download {
+    margin-top: 20px;
+}
+
+.small {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#downloadPage {
+    display: none;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        LOVELY FILES
+    </div>
+
+    <h1>
+        Simple things, made for you.
+    </h1>
+
+    <p class="subtitle">
+        Free digital files in English & Arabic 🤍
+    </p>
+
+</header>
+
+
+
+<!-- FILES -->
+
+<div class="container">
+
+
+    <!-- CURLY HAIR -->
+
+    <div class="card">
+
+        <div class="icon">
+            🌀
+        </div>
+
+        <div class="tag">
+            DIGITAL GUIDE
+        </div>
+
+        <h2>
+            Curly Hair Guide
+        </h2>
+
+        <p class="description">
+            A simple guide for caring for and styling curly hair.
+        </p>
+
+        <button onclick="openFile('Curly Hair Guide', '🌀')">
+            GET FILE →
+        </button>
+
+    </div>
+
+
+
+    <!-- STUDY -->
+
+    <div class="card">
+
+        <div class="icon">
+            📚
+        </div>
+
+        <div class="tag">
+            DIGITAL PLANNER
+        </div>
+
+        <h2>
+            Study Planner
+        </h2>
+
+        <p class="description">
+            A simple planner to organize studying and school work.
+        </p>
+
+        <button onclick="openFile('Study Planner', '📚')">
+            GET FILE →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<footer>
+
+    Free digital downloads · No payment required
+
+</footer>
+
+
+
+<!-- POPUP -->
+
+<div class="overlay" id="popup">
+
+    <div class="popup">
+
+        <button class="close" onclick="closePopup()">
+            ×
+        </button>
+
+
+        <!-- LANGUAGE -->
+
+        <div id="languagePage">
+
+            <div class="icon" id="popupIcon">
+                📄
+            </div>
+
+            <h2>
+                Choose your language
+            </h2>
+
+            <p id="fileName"></p>
+
+
+            <button
+                class="language"
+                onclick="downloadFile('english')"
+            >
+                🇬🇧 English
+            </button>
+
+
+            <button
+                class="language"
+                onclick="downloadFile('arabic')"
+            >
+                🇦🇪 العربية
+            </button>
+
+        </div>
+
+
+
+        <!-- DOWNLOAD -->
+
+        <div id="downloadPage">
+
+            <div class="icon">
+                📥
+            </div>
+
+            <h2>
+                Your file is ready 🤍
+            </h2>
+
+            <p id="downloadName"></p>
+
+            <p class="small">
+                Click the button below to download your PDF.
+            </p>
+
+            <a
+                id="downloadLink"
+                href="#"
+                download
+                style="text-decoration:none;"
+            >
+
+                <button class="download">
+                    DOWNLOAD PDF ↓
+                </button>
+
+            </a>
+
+            <button
+                class="back"
+                onclick="backToLanguages()"
+                style="background:#eee;color:#302927;"
+            >
+                ← CHOOSE ANOTHER LANGUAGE
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+let currentFile = "";
+let currentIcon = "";
+
+
+/* OPEN FILE */
+
+function openFile(file, icon) {
+
+    currentFile = file;
+    currentIcon = icon;
+
+    document.getElementById("popupIcon").innerText = icon;
+
+    document.getElementById("fileName").innerText = file;
+
+    document.getElementById("languagePage").style.display =
+        "block";
+
+    document.getElementById("downloadPage").style.display =
+        "none";
+
+    document.getElementById("popup").classList.add("show");
+
+}
+
+
+
+/* DOWNLOAD */
+
+function downloadFile(language) {
+
+    let filePath = "";
+    let fileName = "";
+
+
+    if (currentFile === "Curly Hair Guide") {
+
+        if (language === "english") {
+
+            filePath = "files/curly-hair-english.pdf";
+
+            fileName = "Curly Hair Guide — English";
+
+        } else {
+
+            filePath = "files/curly-hair-arabic.pdf";
+
+            fileName = "دليل الشعر الكيرلي — عربي";
+
+        }
+
+    }
+
+
+
+    if (currentFile === "Study Planner") {
+
+        if (language === "english") {
+
+            filePath = "files/study-planner-english.pdf";
+
+            fileName = "Study Planner — English";
+
+        } else {
+
+            filePath = "files/study-planner-arabic.pdf";
+
+            fileName = "مخطط الدراسة — عربي";
+
+        }
+
+    }
+
+
+
+    document.getElementById("languagePage").style.display =
+        "none";
+
+    document.getElementById("downloadPage").style.display =
+        "block";
+
+    document.getElementById("downloadName").innerText =
+        fileName;
+
+    document.getElementById("downloadLink").href =
+        filePath;
+
+}
+
+
+
+/* BACK */
+
+function backToLanguages() {
+
+    document.getElementById("downloadPage").style.display =
+        "none";
+
+    document.getElementById("languagePage").style.display =
+        "block";
+
+}
+
+
+
+/* CLOSE */
+
+function closePopup() {
+
+    document.getElementById("popup").classList.remove("show");
+
+}
+
+</script>
+
+
+</body>
+</html>
