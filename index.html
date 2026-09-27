@@ -7,55 +7,41 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Amiri:wght@400;700&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Arabic website fonts: Naskh -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mokhtarbsaid/rare-arabic-fonts/amoshref-naskh/all.min.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
-
 :root{
   --cream:#f6f3ee;
   --paper:#fffdf9;
-
-  /* Soft dark green-grey instead of black */
   --ink:#4d4a4a;
   --muted:#777477;
   --line:#dfd9d5;
 
   --blue:#b9cfdd;
   --blue2:#edf4f7;
-
   --sage:#b9cbb9;
   --sage2:#edf3ed;
-
   --lav:#cbbfd8;
   --lav2:#f1edf5;
-
   --peach:#e4c2ad;
   --peach2:#f6e9e1;
-
   --rose:#ddb9c2;
   --rose2:#f5e9ec;
-
-  --text-soft:#5f5b5d;
 }
 
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
   background:var(--cream);
   color:var(--ink);
-  font-family:"Lato", sans-serif;
+  font-family:"Lato",sans-serif;
   font-weight:400;
 }
 
@@ -64,11 +50,7 @@ button{
   cursor:pointer;
 }
 
-.hidden{
-  display:none!important;
-}
-
-/* ---------------- ARABIC WEBSITE FONT ---------------- */
+.hidden{display:none!important}
 
 [dir="rtl"] body,
 [dir="rtl"] button,
@@ -78,37 +60,29 @@ button{
   font-weight:400;
 }
 
-/* إزالة أي خطوط مزخرفة وجعل كل العناوين عادية وبسيطة */
-[dir="rtl"] h1,
-[dir="rtl"] h2,
-[dir="rtl"] h3,
-[dir="rtl"] h4,
-[dir="rtl"] .section-head h3,
-[dir="rtl"] .page-head h2,
-[dir="rtl"] .cat-title h3,
-[dir="rtl"] .detail-side h2,
-[dir="rtl"] .about-feature h3,
-[dir="rtl"] .about-note h4,
-[dir="rtl"] .collection h4,
-[dir="rtl"] .file-card h4,
-[dir="rtl"] .hero h2{
-  font-family:"Ali Moshref Naskh","Amiri",serif;
-  font-weight:400;
-}
-
-[dir="rtl"] .about-feature h3 em{
-  font-family:"Ali Moshref Naskh","Amiri",serif;
-  font-weight:400;
-  font-style:normal;
-}
-
-/* للعربية والإنجليزية: توحيد الخطوط لتكون عادية تماماً */
-h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card h4, .about-feature h3, .about-note h4 {
+h1,h2,h3,h4,
+.brand-main,
+.hero h2,
+.sheet-title,
+.collection h4,
+.file-card h4,
+.about-feature h3,
+.about-note h4{
   font-family:"Lato",sans-serif;
   font-weight:500;
 }
 
-[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] .brand-main, [dir="rtl"] .hero h2, [dir="rtl"] .sheet-title, [dir="rtl"] .collection h4, [dir="rtl"] .file-card h4, [dir="rtl"] .about-feature h3, [dir="rtl"] .about-note h4 {
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .brand-main,
+[dir="rtl"] .hero h2,
+[dir="rtl"] .sheet-title,
+[dir="rtl"] .collection h4,
+[dir="rtl"] .file-card h4,
+[dir="rtl"] .about-feature h3,
+[dir="rtl"] .about-note h4{
   font-family:"Ali Moshref Naskh","Amiri",serif;
   font-weight:400;
 }
@@ -120,7 +94,7 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
   font-family:"Lato",sans-serif;
 }
 
-/* ---------------- LANGUAGE ---------------- */
+/* LANGUAGE */
 
 .lang-screen{
   min-height:100vh;
@@ -148,7 +122,6 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
 .lang-box h1{
   font-size:clamp(35px,6vw,55px);
   margin:18px 0;
-  font-weight:500;
 }
 
 .lang-box p{
@@ -174,46 +147,31 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
 
 .lang-btn{
   border:0;
-  background:linear-gradient(
-    135deg,
-    var(--blue),
-    var(--lav),
-    var(--rose)
-  );
+  background:linear-gradient(135deg,var(--blue),var(--lav),var(--rose));
   color:#514d50;
   padding:15px 25px;
   min-width:170px;
   box-shadow:0 8px 22px rgba(203,191,216,.18);
-  transition:.2s ease;
+  transition:.2s;
 }
 
-.lang-btn:hover{
+.lang-btn:hover,
+.btn:hover{
   transform:translateY(-2px);
 }
 
-.lang-btn.alt{
-  background:linear-gradient(
-    135deg,
-    var(--paper),
-    var(--blue2),
-    var(--lav2)
-  );
+.lang-btn.alt,
+.btn.light{
+  background:linear-gradient(135deg,var(--paper),var(--blue2),var(--lav2));
   color:var(--ink);
   border:1px solid var(--line);
 }
 
-/* ---------------- HEADER ---------------- */
+/* HEADER */
 
 .topline{
   height:5px;
-  background:linear-gradient(
-    90deg,
-    #a9c7d8 0%,
-    #c5b8d4 25%,
-    #b4c9b4 50%,
-    #e2bda6 75%,
-    #d9b2bc 100%
-  );
+  background:linear-gradient(90deg,#a9c7d8,#c5b8d4,#b4c9b4,#e2bda6,#d9b2bc);
 }
 
 .header{
@@ -244,9 +202,7 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
   color:var(--ink);
 }
 
-[dir="rtl"] .brand{
-  text-align:right;
-}
+[dir="rtl"] .brand{text-align:right}
 
 .brand-main{
   display:block;
@@ -273,29 +229,18 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
 .menu-btn{
   height:42px;
   border:1px solid var(--line);
-  background:linear-gradient(
-    135deg,
-    rgba(255,253,249,.98),
-    rgba(237,244,247,.95)
-  );
+  background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(237,244,247,.95));
   color:var(--ink);
   padding:0 14px;
-  transition:.2s ease;
+  transition:.2s;
 }
+
+.menu-btn{width:44px;font-size:20px}
 
 .lang-switch:hover,
 .menu-btn:hover{
   transform:translateY(-1px);
-  background:linear-gradient(
-    135deg,
-    var(--blue2),
-    var(--lav2)
-  );
-}
-
-.menu-btn{
-  width:44px;
-  font-size:20px;
+  background:linear-gradient(135deg,var(--blue2),var(--lav2));
 }
 
 .drawer{
@@ -303,11 +248,7 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
   right:25px;
   top:72px;
   width:220px;
-  background:linear-gradient(
-    145deg,
-    #fffdf9,
-    #f3eef5
-  );
+  background:linear-gradient(145deg,#fffdf9,#f3eef5);
   border:1px solid var(--line);
   box-shadow:0 18px 45px rgba(77,74,74,.12);
   padding:8px;
@@ -328,19 +269,13 @@ h1, h2, h3, h4, .brand-main, .hero h2, .sheet-title, .collection h4, .file-card 
   color:var(--ink);
 }
 
-[dir="rtl"] .drawer button{
-  text-align:right;
-}
+[dir="rtl"] .drawer button{text-align:right}
 
 .drawer button:hover{
-  background:linear-gradient(
-    90deg,
-    var(--blue2),
-    var(--lav2)
-  );
+  background:linear-gradient(90deg,var(--blue2),var(--lav2));
 }
 
-/* ---------------- GENERAL ---------------- */
+/* GENERAL */
 
 main{
   max-width:1200px;
@@ -348,13 +283,8 @@ main{
   padding:0 25px 70px;
 }
 
-.page{
-  display:none;
-}
-
-.page.active{
-  display:block;
-}
+.page{display:none}
+.page.active{display:block}
 
 .page-head{
   padding:80px 0 45px;
@@ -366,22 +296,20 @@ main{
   letter-spacing:.18em;
   font-size:10px;
   font-weight:700;
-  color:#858084;
 }
 
 .page-head h2{
-  margin:15px 0 15px;
+  margin:15px 0;
   font-size:clamp(35px,5vw,55px);
-  font-weight:500;
 }
 
-.page-head p{
+.page-head p,
+.hero-copy>p{
   color:var(--muted);
-  line-height:1.75;
-  max-width:620px;
+  line-height:1.8;
 }
 
-/* ---------------- HOME ---------------- */
+/* HOME */
 
 .hero{
   min-height:600px;
@@ -392,13 +320,8 @@ main{
   padding:60px 0 70px;
 }
 
-.hero-copy{
-  max-width:600px;
-}
-
 .hero-kicker{
-  display:inline-flex;
-  align-items:center;
+  display:flex;
   gap:8px;
   font-size:10px;
   text-transform:uppercase;
@@ -410,19 +333,12 @@ main{
 .hero h2{
   font-size:clamp(40px,6vw,65px);
   margin:0;
-  font-weight:500;
   line-height:1.2;
 }
 
 .hero h2 span{
   display:block;
-  font-weight:400;
-  background:linear-gradient(
-    90deg,
-    #8faebd,
-    #aa9fba,
-    #c99fa8
-  );
+  background:linear-gradient(90deg,#8faebd,#aa9fba,#c99fa8);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -430,8 +346,6 @@ main{
 
 .hero-copy>p{
   max-width:510px;
-  color:var(--muted);
-  line-height:1.8;
   margin:25px 0;
   font-size:14px;
 }
@@ -444,35 +358,16 @@ main{
 
 .btn{
   border:0;
-  background:linear-gradient(
-    135deg,
-    var(--blue),
-    var(--lav),
-    var(--rose)
-  );
+  background:linear-gradient(135deg,var(--blue),var(--lav),var(--rose));
   color:#514d50;
   padding:14px 20px;
-  transition:.2s ease;
+  transition:.2s;
   box-shadow:0 8px 22px rgba(203,191,216,.16);
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
-
 .btn.light{
-  background:linear-gradient(
-    135deg,
-    var(--paper),
-    var(--blue2),
-    var(--lav2)
-  );
-  color:var(--ink);
-  border:1px solid var(--line);
   box-shadow:none;
 }
-
-/* HOME ART */
 
 .hero-art{
   position:relative;
@@ -492,40 +387,24 @@ main{
 }
 
 .sheet.one{
-  background:linear-gradient(
-    145deg,
-    #f2f7f9,
-    #e5eff4,
-    #d8e7ee
-  );
+  background:linear-gradient(145deg,#f2f7f9,#e5eff4,#d8e7ee);
   transform:rotate(-6deg) translate(-65px,5px);
 }
 
 .sheet.two{
-  background:linear-gradient(
-    145deg,
-    #f6f3f8,
-    #eee9f3,
-    #e4ddea
-  );
+  background:linear-gradient(145deg,#f6f3f8,#eee9f3,#e4ddea);
   transform:rotate(2deg) translate(25px,-18px);
   z-index:2;
 }
 
 .sheet.three{
-  background:linear-gradient(
-    145deg,
-    #f2f6f0,
-    #e8efe7,
-    #dce8dc
-  );
+  background:linear-gradient(145deg,#f2f6f0,#e8efe7,#dce8dc);
   transform:rotate(6deg) translate(75px,38px);
   z-index:1;
 }
 
 .sheet-title{
   font-size:26px;
-  font-weight:500;
   margin:25px 0;
 }
 
@@ -567,8 +446,6 @@ main{
 .section-head h3{
   font-size:clamp(30px,4vw,45px);
   margin:12px 0 0;
-  max-width:700px;
-  font-weight:500;
 }
 
 .section-head p{
@@ -578,7 +455,8 @@ main{
   font-size:13px;
 }
 
-.collections{
+.collections,
+.file-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:15px;
@@ -593,30 +471,15 @@ main{
 }
 
 .collection.study{
-  background:linear-gradient(
-    135deg,
-    #eef5f8 0%,
-    #dcebf1 45%,
-    #c8dce6 100%
-  );
+  background:linear-gradient(135deg,#eef5f8,#dcebf1,#c8dce6);
 }
 
 .collection.self{
-  background:linear-gradient(
-    135deg,
-    #eef4ed 0%,
-    #dfebdf 45%,
-    #cbdcca 100%
-  );
+  background:linear-gradient(135deg,#eef4ed,#dfebdf,#cbdcca);
 }
 
 .collection.life{
-  background:linear-gradient(
-    135deg,
-    #f7ece5 0%,
-    #f0ddd2 45%,
-    #e4c4b3 100%
-  );
+  background:linear-gradient(135deg,#f7ece5,#f0ddd2,#e4c4b3);
 }
 
 .collection .num{
@@ -626,16 +489,11 @@ main{
 }
 
 .collection h4{
-  position:relative;
-  z-index:2;
   margin:42px 0 10px;
   font-size:32px;
-  font-weight:500;
 }
 
 .collection p{
-  position:relative;
-  z-index:2;
   max-width:250px;
   color:#686367;
   line-height:1.7;
@@ -646,10 +504,8 @@ main{
   position:absolute;
   left:30px;
   bottom:28px;
-  z-index:3;
   border:0;
   background:none;
-  padding:0;
   font-weight:700;
   color:#5b575a;
 }
@@ -684,11 +540,9 @@ main{
   left:-45px;
 }
 
-/* ---------------- FILES ---------------- */
+/* FILE CARDS */
 
-.cat-block{
-  margin-bottom:65px;
-}
+.cat-block{margin-bottom:65px}
 
 .cat-title{
   display:flex;
@@ -700,24 +554,12 @@ main{
 .cat-title h3{
   margin:0;
   font-size:30px;
-  font-weight:500;
 }
 
 .cat-rule{
   height:1px;
-  background:linear-gradient(
-    90deg,
-    var(--blue),
-    var(--lav),
-    var(--rose)
-  );
+  background:linear-gradient(90deg,var(--blue),var(--lav),var(--rose));
   flex:1;
-}
-
-.file-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
 }
 
 .file-card{
@@ -731,48 +573,23 @@ main{
 }
 
 .file-card.blue{
-  background:linear-gradient(
-    145deg,
-    #eef6f8 0%,
-    #e2eef3 48%,
-    #d2e3eb 100%
-  );
+  background:linear-gradient(145deg,#eef6f8,#e2eef3,#d2e3eb);
 }
 
 .file-card.sage{
-  background:linear-gradient(
-    145deg,
-    #f0f5ee 0%,
-    #e6eee5 48%,
-    #d6e4d6 100%
-  );
+  background:linear-gradient(145deg,#f0f5ee,#e6eee5,#d6e4d6);
 }
 
 .file-card.lav{
-  background:linear-gradient(
-    145deg,
-    #f5f1f8 0%,
-    #eee9f3 48%,
-    #e1d9e9 100%
-  );
+  background:linear-gradient(145deg,#f5f1f8,#eee9f3,#e1d9e9);
 }
 
 .file-card.peach{
-  background:linear-gradient(
-    145deg,
-    #f9f0ea 0%,
-    #f3e4da 48%,
-    #e8d1c3 100%
-  );
+  background:linear-gradient(145deg,#f9f0ea,#f3e4da,#e8d1c3);
 }
 
 .file-card.rose{
-  background:linear-gradient(
-    145deg,
-    #f8eef0 0%,
-    #f2e4e7 48%,
-    #e7d3d8 100%
-  );
+  background:linear-gradient(145deg,#f8eef0,#f2e4e7,#e7d3d8);
 }
 
 .file-no{
@@ -791,13 +608,11 @@ main{
   justify-content:center;
   margin:32px 0 20px;
   font-size:20px;
-  font-weight:500;
   background:rgba(255,255,255,.16);
 }
 
 .file-card h4{
   font-size:26px;
-  font-weight:500;
   margin:0 0 12px;
 }
 
@@ -824,11 +639,7 @@ main{
   font-weight:700;
 }
 
-/* ---------------- DETAIL ---------------- */
-
-#detail-content{
-  padding-bottom:50px;
-}
+/* DETAIL */
 
 .detail{
   display:grid;
@@ -857,7 +668,6 @@ main{
 
 .detail-side h2{
   font-size:40px;
-  font-weight:500;
   margin:20px 0;
 }
 
@@ -886,59 +696,19 @@ main{
 }
 
 .detail-preview{
-  padding:45px;
-  background:linear-gradient(
-    145deg,
-    #f5f2ed,
-    #eef2f3,
-    #f1edf4
-  );
+  padding:30px;
+  background:linear-gradient(145deg,#f5f2ed,#eef2f3,#f1edf4);
 }
 
-.preview-page{
-  min-height:650px;
-  background:var(--paper);
+.pdf-preview{
+  width:100%;
+  height:760px;
   border:1px solid var(--line);
-  padding:35px;
-  box-shadow:0 20px 45px rgba(77,74,74,.08);
+  background:#fff;
+  display:block;
 }
 
-.preview-page small{
-  font-size:9px;
-  letter-spacing:.15em;
-}
-
-.preview-page h3{
-  font-size:32px;
-  font-weight:500;
-  margin:45px 0 12px;
-}
-
-.preview-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:40px;
-}
-
-.preview-box{
-  min-height:75px;
-  border:1px solid var(--line);
-  padding:14px;
-  font-size:11px;
-  color:var(--muted);
-  background:linear-gradient(
-    135deg,
-    rgba(237,244,247,.65),
-    rgba(241,237,245,.65)
-  );
-}
-
-.download-row{
-  margin-top:30px;
-}
-
-/* ---------------- ABOUT ---------------- */
+/* ABOUT */
 
 .about-editorial{
   display:grid;
@@ -948,75 +718,37 @@ main{
 }
 
 .about-feature{
-  height:500px;
   min-height:500px;
-  background:linear-gradient(
-    145deg,
-    #fffdf9,
-    #f1f5f5,
-    #f3edf5
-  );
+  background:linear-gradient(145deg,#fffdf9,#f1f5f5,#f3edf5);
   border:1px solid var(--line);
   padding:48px;
-  position:relative;
-  overflow:hidden;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
 }
 
-.about-feature::after{
-  content:"";
-  position:absolute;
-  width:260px;
-  height:260px;
-  border:1px solid rgba(203,191,216,.7);
-  border-radius:50%;
-  right:-90px;
-  bottom:-95px;
-}
-
-.about-feature .eyebrow{
-  position:relative;
-  z-index:2;
-}
-
 .about-feature h3{
-  position:relative;
-  z-index:2;
   max-width:650px;
   margin:45px 0 20px;
   font-size:clamp(35px,5vw,50px);
-  font-weight:500;
   line-height:1.3;
 }
 
-.about-feature h3 em{
-  font-weight:normal;
-  color:#756b79;
-  font-style:normal;
-}
-
-.about-feature p{
-  position:relative;
-  z-index:2;
-  max-width:520px;
-  margin:0;
+.about-feature p,
+.about-note p,
+.about-strip-item p{
   color:var(--muted);
-  line-height:1.85;
-  font-size:14px;
+  line-height:1.8;
+  font-size:13px;
 }
 
 .about-side-new{
-  height:500px;
   display:grid;
   grid-template-rows:1fr 1fr;
   gap:18px;
 }
 
 .about-note{
-  min-height:0;
-  height:241px;
   padding:32px;
   border:1px solid var(--line);
   display:flex;
@@ -1025,21 +757,16 @@ main{
 }
 
 .about-note.blue{
-  background:linear-gradient(
-    145deg,
-    #edf5f7,
-    #e1edf1,
-    #d5e4ea
-  );
+  background:linear-gradient(145deg,#edf5f7,#e1edf1,#d5e4ea);
 }
 
 .about-note.lav{
-  background:linear-gradient(
-    145deg,
-    #f5f1f8,
-    #eee9f3,
-    #e2d9e9
-  );
+  background:linear-gradient(145deg,#f5f1f8,#eee9f3,#e2d9e9);
+}
+
+.about-note h4{
+  margin:30px 0 8px;
+  font-size:28px;
 }
 
 .about-note .number{
@@ -1048,37 +775,20 @@ main{
   font-weight:700;
 }
 
-.about-note h4{
-  margin:30px 0 8px;
-  font-size:28px;
-  font-weight:500;
-}
-
-.about-note p{
-  margin:0;
-  max-width:300px;
-  color:#686367;
-  line-height:1.7;
-  font-size:13px;
-}
-
 .about-strip{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
   border:1px solid var(--line);
   background:var(--paper);
 }
 
 .about-strip-item{
   min-height:180px;
-  height:180px;
   padding:30px;
   border-right:1px solid var(--line);
 }
 
-.about-strip-item:last-child{
-  border-right:0;
-}
+.about-strip-item:last-child{border-right:0}
 
 [dir="rtl"] .about-strip-item{
   border-right:0;
@@ -1090,50 +800,29 @@ main{
 }
 
 .about-strip-item:nth-child(1){
-  background:linear-gradient(
-    145deg,
-    rgba(231,240,244,.9),
-    rgba(214,231,237,.8)
-  );
+  background:linear-gradient(145deg,#e7f0f4,#d6e7ed);
 }
 
 .about-strip-item:nth-child(2){
-  background:linear-gradient(
-    145deg,
-    rgba(237,243,235,.9),
-    rgba(217,231,217,.8)
-  );
+  background:linear-gradient(145deg,#edf3eb,#d9e7d9);
 }
 
 .about-strip-item:nth-child(3){
-  background:linear-gradient(
-    145deg,
-    rgba(247,235,227,.9),
-    rgba(235,214,200,.8)
-  );
+  background:linear-gradient(145deg,#f7ebe3,#ebd6c8);
 }
 
 .about-strip-item span{
   font-size:9px;
   letter-spacing:.15em;
   font-weight:700;
-  color:var(--muted);
 }
 
 .about-strip-item h4{
   margin:27px 0 7px;
   font-size:22px;
-  font-weight:500;
 }
 
-.about-strip-item p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.65;
-  font-size:12px;
-}
-
-/* ---------------- GUIDE ---------------- */
+/* GUIDE */
 
 .steps{
   display:grid;
@@ -1148,47 +837,17 @@ main{
   min-height:240px;
 }
 
-.step:nth-child(1){
-  background:linear-gradient(145deg,#edf5f7,#dcebf0);
-}
+.step:nth-child(1){background:linear-gradient(145deg,#edf5f7,#dcebf0)}
+.step:nth-child(2){background:linear-gradient(145deg,#eef4ec,#dfeade)}
+.step:nth-child(3){background:linear-gradient(145deg,#f4f0f7,#e8e0ed)}
+.step:nth-child(4){background:linear-gradient(145deg,#f7ece4,#ecd8cc)}
 
-.step:nth-child(2){
-  background:linear-gradient(145deg,#eef4ec,#dfeade);
-}
+.step b{font-size:24px}
+.step h4{font-size:24px;margin:40px 0 8px}
+.step p{color:var(--muted);font-size:12px;line-height:1.7}
 
-.step:nth-child(3){
-  background:linear-gradient(145deg,#f4f0f7,#e8e0ed);
-}
-
-.step:nth-child(4){
-  background:linear-gradient(145deg,#f7ece4,#ecd8cc);
-}
-
-.step b{
-  font-size:24px;
-  font-weight:500;
-}
-
-.step h4{
-  font-size:24px;
-  font-weight:500;
-  margin:40px 0 8px;
-}
-
-.step p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.7;
-}
-
-.faq{
-  border-top:1px solid var(--line);
-}
-
-.faq-item{
-  border-bottom:1px solid var(--line);
-}
-
+.faq{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
 .faq-q{
   padding:23px 0;
   display:flex;
@@ -1204,28 +863,14 @@ main{
   line-height:1.7;
   font-size:13px;
   padding:0 0 25px;
-  max-width:700px;
 }
 
-.faq-item.open .faq-a{
-  display:block;
-}
+.faq-item.open .faq-a{display:block}
 
-/* ---------------- CONTACT ---------------- */
-
-.contact-layout{
-  display:block;
-  width:100%;
-}
+/* CONTACT */
 
 .contact-box{
-  width:100%;
-  background:linear-gradient(
-    145deg,
-    #fffdf9,
-    #f0f4f4,
-    #f2edf5
-  );
+  background:linear-gradient(145deg,#fffdf9,#f0f4f4,#f2edf5);
   border:1px solid var(--line);
   padding:45px;
 }
@@ -1233,29 +878,24 @@ main{
 .contact-box h3{
   margin:0 0 10px;
   font-size:32px;
-  font-weight:500;
 }
 
 .contact-box>p{
   color:var(--muted);
   line-height:1.7;
   font-size:13px;
-  margin-bottom:30px;
 }
 
 .contact-fields{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
+  margin-top:30px;
 }
 
 .contact-field{
   border:1px solid var(--line);
-  background:linear-gradient(
-    145deg,
-    #faf8f3,
-    #f1f5f5
-  );
+  background:linear-gradient(145deg,#faf8f3,#f1f5f5);
   padding:20px;
 }
 
@@ -1275,13 +915,12 @@ main{
   color:#9a9699;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* FOOTER */
 
 footer{
   max-width:1200px;
   margin:auto;
   padding:25px;
-  border-top:0;
   display:flex;
   justify-content:space-between;
   gap:20px;
@@ -1291,33 +930,24 @@ footer{
   position:relative;
 }
 
-footer::before{
+footer:before{
   content:"";
   position:absolute;
   top:0;
   left:25px;
   right:25px;
   height:1px;
-  background:linear-gradient(
-    90deg,
-    var(--blue),
-    var(--lav),
-    var(--sage),
-    var(--peach),
-    var(--rose)
-  );
+  background:linear-gradient(90deg,var(--blue),var(--lav),var(--sage),var(--peach),var(--rose));
 }
 
-/* ---------------- MOBILE ---------------- */
+/* MOBILE */
 
 @media(max-width:950px){
-  .hero{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
 
-  .hero-art{
-    min-height:430px;
+  .hero,
+  .about-editorial,
+  .detail{
+    grid-template-columns:1fr;
   }
 
   .collections,
@@ -1325,22 +955,8 @@ footer::before{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .about-editorial,
-  .detail{
-    grid-template-columns:1fr;
-  }
-
-  .about-feature{
-    height:500px;
-  }
-
-  .about-side-new{
-    height:auto;
-  }
-
-  .about-note{
-    height:auto;
-    min-height:241px;
+  .steps{
+    grid-template-columns:repeat(2,1fr);
   }
 
   .detail-side{
@@ -1353,10 +969,6 @@ footer::before{
     border-bottom:1px solid var(--line);
   }
 
-  .steps{
-    grid-template-columns:repeat(2,1fr);
-  }
-
   .about-strip{
     grid-template-columns:1fr;
   }
@@ -1366,16 +978,11 @@ footer::before{
     border-bottom:1px solid var(--line);
   }
 
-  .about-strip-item:last-child{
-    border-bottom:0;
-  }
-
   [dir="rtl"] .about-strip-item{
     border-left:0;
-    border-bottom:1px solid var(--line);
   }
 
-  [dir="rtl"] .about-strip-item:last-child{
+  .about-strip-item:last-child{
     border-bottom:0;
   }
 
@@ -1385,30 +992,14 @@ footer::before{
 }
 
 @media(max-width:600px){
-  main{
-    padding-left:15px;
-    padding-right:15px;
-  }
 
-  .nav{
-    padding:15px;
-  }
+  main{padding-left:15px;padding-right:15px}
 
-  .brand-main{
-    font-size:20px;
-  }
+  .nav{padding:15px}
 
-  .hero{
-    padding-top:45px;
-  }
+  .hero{padding-top:45px}
 
-  .hero h2{
-    font-size:40px;
-  }
-
-  .hero-art{
-    min-height:360px;
-  }
+  .hero-art{min-height:360px}
 
   .sheet{
     width:210px;
@@ -1426,16 +1017,8 @@ footer::before{
     grid-template-columns:1fr;
   }
 
-  .collection{
-    min-height:290px;
-  }
-
   .page-head{
     padding-top:55px;
-  }
-
-  .page-head h2{
-    font-size:35px;
   }
 
   .detail-side,
@@ -1446,31 +1029,8 @@ footer::before{
     padding:28px;
   }
 
-  .about-feature{
-    height:auto;
-    min-height:500px;
-  }
-
-  .about-side-new{
-    height:auto;
-  }
-
-  .about-note{
-    min-height:241px;
-    height:auto;
-  }
-
-  .detail-side h2{
-    font-size:32px;
-  }
-
-  .preview-page{
-    min-height:500px;
-    padding:25px;
-  }
-
-  .preview-page h3{
-    font-size:30px;
+  .pdf-preview{
+    height:600px;
   }
 
   footer{
@@ -1478,7 +1038,6 @@ footer::before{
     line-height:2;
   }
 }
-
 </style>
 </head>
 
@@ -1487,39 +1046,104 @@ footer::before{
 <!-- LANGUAGE -->
 <div id="language" class="lang-screen">
   <div class="lang-box">
+
     <div class="eyebrow">A small digital studio</div>
+
     <h1>Digital Files</h1>
-    <p>Simple, useful printable files designed with care.</p>
+
+    <p>
+      Simple, useful printable files designed with care.
+    </p>
+
     <div class="lang-actions">
-      <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
-      <button class="lang-btn alt" onclick="setLanguage('ar')">🇦🇪 العربية</button>
+
+      <button class="lang-btn" onclick="setLanguage('en')">
+        🇬🇧 English
+      </button>
+
+      <button class="lang-btn alt" onclick="setLanguage('ar')">
+        🇦🇪 العربية
+      </button>
+
     </div>
   </div>
 </div>
 
 <!-- APP -->
 <div id="app" class="hidden">
+
 <div class="topline"></div>
 
 <header class="header">
+
 <nav class="nav">
 
 <button class="brand" onclick="go('home')">
-<span class="brand-main">Digital Files</span>
-<span class="brand-sub" data-en="printable collection" data-ar="ملفات قابلة للطباعة">printable collection</span>
+
+<span class="brand-main">
+Digital Files
+</span>
+
+<span
+  class="brand-sub"
+  data-en="printable collection"
+  data-ar="ملفات قابلة للطباعة"
+>
+printable collection
+</span>
+
 </button>
 
 <div class="nav-right">
-<button class="lang-switch" onclick="toggleLanguage()">EN / AR</button>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<button
+  class="lang-switch"
+  onclick="toggleLanguage()"
+>
+EN / AR
+</button>
+
+<button
+  class="menu-btn"
+  onclick="toggleMenu()"
+>
+☰
+</button>
+
 </div>
 
 <div id="drawer" class="drawer hidden">
-<button onclick="go('home');toggleMenu()" data-en="Home" data-ar="الرئيسية">Home</button>
-<button onclick="go('files');toggleMenu()" data-en="Files" data-ar="الملفات">Files</button>
-<button onclick="go('about');toggleMenu()" data-en="About" data-ar="نبذة">About</button>
-<button onclick="go('guide');toggleMenu()" data-en="Guide" data-ar="دليل الإرشاد">Guide</button>
-<button onclick="go('contact');toggleMenu()" data-en="Contact" data-ar="التواصل">Contact</button>
+
+<button onclick="go('home');toggleMenu()"
+  data-en="Home"
+  data-ar="الرئيسية">
+Home
+</button>
+
+<button onclick="go('files');toggleMenu()"
+  data-en="Files"
+  data-ar="الملفات">
+Files
+</button>
+
+<button onclick="go('about');toggleMenu()"
+  data-en="About"
+  data-ar="نبذة">
+About
+</button>
+
+<button onclick="go('guide');toggleMenu()"
+  data-en="Guide"
+  data-ar="دليل الإرشاد">
+Guide
+</button>
+
+<button onclick="go('contact');toggleMenu()"
+  data-en="Contact"
+  data-ar="التواصل">
+Contact
+</button>
+
 </div>
 
 </nav>
@@ -1528,6 +1152,7 @@ footer::before{
 <main>
 
 <!-- HOME -->
+
 <section id="home" class="page active">
 
 <div class="hero">
@@ -1536,20 +1161,46 @@ footer::before{
 
 <span class="hero-kicker">
 ✦
-<span data-en="Made for real life" data-ar="مصممة للحياة اليومية">Made for real life</span>
+<span
+  data-en="Made for real life"
+  data-ar="مصممة للحياة اليومية"
+>
+Made for real life
+</span>
 </span>
 
-<h2 data-en="Make space for what matters." data-ar="مساحة لكل ما يهمكِ.">
-Make space for <span>what matters.</span>
+<h2>
+Make space for
+<span>what matters.</span>
 </h2>
 
-<p data-en="A curated collection of printable planners, trackers and little life tools. Pick a file, choose your language, and download it directly as a PDF." data-ar="مجموعة مختارة من المخططات والمتابعات وأدوات الحياة اليومية. اختاري الملف، ثم اللغة، وسيتم تنزيله مباشرة بصيغة PDF.">
-A curated collection of printable planners, trackers and little life tools.
+<p
+  data-en="A collection of printable planners, trackers and simple life tools. Choose a file, preview it and download the PDF."
+  data-ar="مجموعة من المخططات والمتابعات وأدوات الحياة اليومية. اختاري الملف، شاهدي المعاينة، وحمّلي ملف PDF."
+>
+A collection of printable planners, trackers and simple life tools.
 </p>
 
 <div class="hero-cta">
-<button class="btn" onclick="go('files')" data-en="Explore files" data-ar="تصفّحي الملفات">Explore files</button>
-<button class="btn light" onclick="go('guide')" data-en="How it works" data-ar="كيف يعمل؟">How it works</button>
+
+<button
+  class="btn"
+  onclick="go('files')"
+  data-en="Explore files"
+  data-ar="تصفّحي الملفات"
+>
+Explore files
+</button>
+
+<button
+  class="btn light"
+  onclick="go('guide')"
+  data-en="How it works"
+  data-ar="كيف يعمل؟"
+>
+How it works
+</button>
+
 </div>
 
 </div>
@@ -1557,22 +1208,49 @@ A curated collection of printable planners, trackers and little life tools.
 <div class="hero-art">
 
 <div class="sheet one">
+
 <span class="eyebrow">01 / plan</span>
-<div class="sheet-title">Study week</div>
-<div class="mini-lines"><i></i><i></i><i></i><i></i></div>
+
+<div class="sheet-title">
+Study week
+</div>
+
+<div class="mini-lines">
+<i></i><i></i><i></i><i></i>
+</div>
+
 </div>
 
 <div class="sheet two">
+
 <span class="eyebrow">02 / care</span>
-<div class="sheet-title">Little rituals</div>
-<div class="mini-lines"><i></i><i></i><i></i><i></i></div>
+
+<div class="sheet-title">
+Little rituals
+</div>
+
+<div class="mini-lines">
+<i></i><i></i><i></i><i></i>
+</div>
+
 </div>
 
 <div class="sheet three">
+
 <span class="eyebrow">03 / life</span>
-<div class="sheet-title">Make it yours.</div>
-<div class="mini-lines"><i></i><i></i><i></i><i></i></div>
-<span class="stamp">PDF / PRINT</span>
+
+<div class="sheet-title">
+Make it yours.
+</div>
+
+<div class="mini-lines">
+<i></i><i></i><i></i><i></i>
+</div>
+
+<span class="stamp">
+PDF / PRINT
+</span>
+
 </div>
 
 </div>
@@ -1583,16 +1261,25 @@ A curated collection of printable planners, trackers and little life tools.
 <div class="section-head">
 
 <div>
-<div class="eyebrow">The collection</div>
 
-<h3 data-en="Three ways to organize your world." data-ar="ثلاثة أقسام لترتيب عالمكِ.">
+<div class="eyebrow">
+The collection
+</div>
+
+<h3
+  data-en="Three ways to organize your world."
+  data-ar="ثلاثة أقسام لترتيب عالمكِ."
+>
 Three ways to organize your world.
 </h3>
 
 </div>
 
-<p data-en="Each section has its own visual language, while every file has a different layout inside." data-ar="لكل قسم هويته الخاصة، وكل ملف له تصميم مختلف من الداخل.">
-Each section has its own visual language.
+<p
+  data-en="Every section has its own mood, and every file has a different layout inside."
+  data-ar="لكل قسم أجواؤه الخاصة، ولكل ملف تصميم وترتيب مختلف من الداخل."
+>
+Every section has its own mood.
 </p>
 
 </div>
@@ -1603,13 +1290,25 @@ Each section has its own visual language.
 
 <span class="num">01 / STUDY</span>
 
-<h4 data-en="Study" data-ar="الدراسة">Study</h4>
+<h4
+  data-en="Study"
+  data-ar="الدراسة"
+>
+Study
+</h4>
 
-<p data-en="Plans, exams, homework and focused school days." data-ar="للتخطيط والاختبارات والواجبات وأيام الدراسة المنظمة.">
-Plans, exams, homework and focused school days.
+<p
+  data-en="Plans, exams and homework for more organized school days."
+  data-ar="للتخطيط والاختبارات والواجبات وأيام الدراسة المنظمة."
+>
+Plans, exams and homework.
 </p>
 
-<button onclick="filterFiles('study')" data-en="View section →" data-ar="شاهدي القسم ←">
+<button
+  onclick="filterFiles('study')"
+  data-en="View section →"
+  data-ar="شاهدي القسم ←"
+>
 View section →
 </button>
 
@@ -1621,13 +1320,25 @@ View section →
 
 <span class="num">02 / SELF CARE</span>
 
-<h4 data-en="Self Care" data-ar="العناية بالنفس">Self Care</h4>
+<h4
+  data-en="Self Care"
+  data-ar="العناية بالنفس"
+>
+Self Care
+</h4>
 
-<p data-en="Gentle routines, habits and space to check in with yourself." data-ar="روتين لطيف وعادات ومساحة للاهتمام بنفسكِ.">
-Gentle routines, habits and space to check in.
+<p
+  data-en="Simple pages for routines, habits and taking care of yourself."
+  data-ar="صفحات بسيطة للروتين والعادات والاهتمام بنفسكِ."
+>
+Simple pages for routines and habits.
 </p>
 
-<button onclick="filterFiles('self')" data-en="View section →" data-ar="شاهدي القسم ←">
+<button
+  onclick="filterFiles('self')"
+  data-en="View section →"
+  data-ar="شاهدي القسم ←"
+>
 View section →
 </button>
 
@@ -1639,13 +1350,25 @@ View section →
 
 <span class="num">03 / LIFESTYLE</span>
 
-<h4 data-en="Lifestyle" data-ar="أسلوب الحياة">Lifestyle</h4>
+<h4
+  data-en="Lifestyle"
+  data-ar="أسلوب الحياة"
+>
+Lifestyle
+</h4>
 
-<p data-en="Wishlists, birthdays and the little plans that make life yours." data-ar="قوائم الأمنيات وأعياد الميلاد والخطط الصغيرة.">
-Wishlists, birthdays and little plans.
+<p
+  data-en="Wishlists and birthday planning for the little things you care about."
+  data-ar="قوائم الأمنيات وتخطيط أعياد الميلاد للأشياء التي تهمكِ."
+>
+Wishlists and birthday planning.
 </p>
 
-<button onclick="filterFiles('life')" data-en="View section →" data-ar="شاهدي القسم ←">
+<button
+  onclick="filterFiles('life')"
+  data-en="View section →"
+  data-ar="شاهدي القسم ←"
+>
 View section →
 </button>
 
@@ -1659,18 +1382,30 @@ View section →
 </section>
 
 <!-- FILES -->
+
 <section id="files" class="page">
 
 <div class="page-head">
 
-<small data-en="The library" data-ar="المكتبة">The library</small>
+<small
+  data-en="The library"
+  data-ar="المكتبة"
+>
+The library
+</small>
 
-<h2 data-en="Choose your file." data-ar="اختاري ملفكِ.">
+<h2
+  data-en="Choose your file."
+  data-ar="اختاري ملفكِ."
+>
 Choose your file.
 </h2>
 
-<p data-en="Eight different files. Eight different layouts. Nothing is a copy of the one before it." data-ar="ثمانية ملفات بتصاميم مختلفة. كل ملف له فكرته وترتيبه الخاص.">
-Eight different files. Eight different layouts.
+<p
+  data-en="Eight different files, each with its own purpose, pages and design."
+  data-ar="ثمانية ملفات مختلفة، ولكل ملف هدفه وصفحاته وتصميمه الخاص."
+>
+Eight different files.
 </p>
 
 </div>
@@ -1680,20 +1415,30 @@ Eight different files. Eight different layouts.
 </section>
 
 <!-- ABOUT -->
+
 <section id="about" class="page">
 
 <div class="page-head">
 
-<small data-en="A little introduction" data-ar="نبذة صغيرة">
+<small
+  data-en="A little introduction"
+  data-ar="نبذة صغيرة"
+>
 A little introduction
 </small>
 
-<h2 data-en="Small tools for everyday moments." data-ar="أدوات صغيرة للحظات اليومية.">
+<h2
+  data-en="Small tools for everyday moments."
+  data-ar="أدوات صغيرة للحظات اليومية."
+>
 Small tools for everyday moments.
 </h2>
 
-<p data-en="A digital collection made for the things you actually want to organize — from school days and routines to birthdays, wishlists and everyday plans." data-ar="مجموعة رقمية صُممت للأشياء التي نحتاج فعلاً إلى ترتيبها، من أيام الدراسة والروتين إلى أعياد الميلاد وقوائم الأمنيات والخطط اليومية.">
-A digital collection made for the things you actually want to organize.
+<p
+  data-en="Practical digital files made for school, routines, personal care and everyday plans."
+  data-ar="ملفات رقمية عملية صُممت للدراسة والروتين والعناية بالنفس وخطط الحياة اليومية."
+>
+Practical digital files made for everyday life.
 </p>
 
 </div>
@@ -1702,19 +1447,28 @@ A digital collection made for the things you actually want to organize.
 
 <div class="about-feature">
 
-<span class="eyebrow">DIGITAL COLLECTION / 01</span>
+<span class="eyebrow">
+DIGITAL COLLECTION / 01
+</span>
 
 <div>
 
-<h3 data-en="Made for the little things that make life easier." data-ar="مصممة للتفاصيل الصغيرة التي تجعل الحياة أسهل.">
+<h3
+  data-en="Made for the little things that make life easier."
+  data-ar="مصممة للتفاصيل الصغيرة التي تجعل الحياة أسهل."
+>
 Made for the little things that make life easier.
 </h3>
 
-<p data-en="The idea behind the collection is simple: create practical digital files that feel lovely to use. Every section has its own mood, and every file has its own layout instead of repeating the same template." data-ar="فكرة المجموعة بسيطة: تصميم ملفات رقمية عملية ومريحة للاستخدام. لكل قسم أجواؤه الخاصة، ولكل ملف ترتيبه وتصميمه المختلف بدلاً من تكرار القالب نفسه.">
-The idea behind the collection is simple: create practical digital files that feel lovely to use.
+<p
+  data-en="Every file starts with a real purpose. The goal is to make planning feel clear, useful and enjoyable."
+  data-ar="كل ملف يبدأ بهدف حقيقي. الفكرة هي أن يكون التخطيط واضحاً ومفيداً وممتعاً."
+>
+Every file starts with a real purpose.
 </p>
 
 </div>
+
 </div>
 
 <div class="about-side-new">
@@ -1722,15 +1476,25 @@ The idea behind the collection is simple: create practical digital files that fe
 <div class="about-note blue">
 
 <div>
-<span class="number">01 / PURPOSE</span>
 
-<h4 data-en="Useful first." data-ar="الفائدة أولاً.">
+<span class="number">
+01 / PURPOSE
+</span>
+
+<h4
+  data-en="Useful first."
+  data-ar="الفائدة أولاً."
+>
 Useful first.
 </h4>
+
 </div>
 
-<p data-en="Each file starts with something real: a task to organize, a routine to follow, or a moment worth planning." data-ar="كل ملف يبدأ باحتياج حقيقي: مهمة تحتاج إلى ترتيب، أو روتين، أو مناسبة تستحق التخطيط لها.">
-Each file starts with something real.
+<p
+  data-en="Each page has a reason to be there."
+  data-ar="كل صفحة موجودة لسبب واضح."
+>
+Each page has a reason to be there.
 </p>
 
 </div>
@@ -1738,15 +1502,25 @@ Each file starts with something real.
 <div class="about-note lav">
 
 <div>
-<span class="number">02 / FEEL</span>
 
-<h4 data-en="Pretty, but practical." data-ar="جميلة وعملية.">
+<span class="number">
+02 / FEEL
+</span>
+
+<h4
+  data-en="Pretty, but practical."
+  data-ar="جميلة وعملية."
+>
 Pretty, but practical.
 </h4>
+
 </div>
 
-<p data-en="Soft colours, clear pages and thoughtful details keep the files enjoyable without making them complicated." data-ar="ألوان ناعمة وصفحات واضحة وتفاصيل مدروسة تجعل الملفات جميلة من دون أن تكون معقدة.">
-Soft colours, clear pages and thoughtful details.
+<p
+  data-en="Soft colours and clear pages keep things easy to use."
+  data-ar="الألوان الناعمة والصفحات الواضحة تجعل استخدامها سهلاً."
+>
+Soft colours and clear pages.
 </p>
 
 </div>
@@ -1760,12 +1534,18 @@ Soft colours, clear pages and thoughtful details.
 
 <span>01 / STUDY</span>
 
-<h4 data-en="For focused days" data-ar="لأيام الدراسة">
+<h4
+  data-en="For focused days"
+  data-ar="لأيام الدراسة"
+>
 For focused days
 </h4>
 
-<p data-en="Planners and trackers for school, exams and homework." data-ar="مخططات ومتابعات للدراسة والاختبارات والواجبات.">
-Planners and trackers for school, exams and homework.
+<p
+  data-en="Planners, exam pages and homework tracking."
+  data-ar="مخططات واختبارات ومتابعة للواجبات."
+>
+Planners, exam pages and homework tracking.
 </p>
 
 </div>
@@ -1774,12 +1554,18 @@ Planners and trackers for school, exams and homework.
 
 <span>02 / SELF CARE</span>
 
-<h4 data-en="For gentle routines" data-ar="للروتين والعناية">
+<h4
+  data-en="For gentle routines"
+  data-ar="للروتين والعناية"
+>
 For gentle routines
 </h4>
 
-<p data-en="Simple pages for habits, self-care and curly hair routines." data-ar="صفحات بسيطة للعادات والعناية بالنفس وروتين الشعر الكيرلي.">
-Simple pages for habits, self-care and curly hair routines.
+<p
+  data-en="Simple pages for habits, self-care and curly hair routines."
+  data-ar="صفحات بسيطة للعادات والعناية بالنفس وروتين الشعر الكيرلي."
+>
+Simple pages for habits and self-care.
 </p>
 
 </div>
@@ -1788,12 +1574,18 @@ Simple pages for habits, self-care and curly hair routines.
 
 <span>03 / LIFESTYLE</span>
 
-<h4 data-en="For little plans" data-ar="لخطط الحياة الصغيرة">
+<h4
+  data-en="For little plans"
+  data-ar="لخطط الحياة الصغيرة"
+>
 For little plans
 </h4>
 
-<p data-en="A place for wishlists, birthdays and the details you do not want to forget." data-ar="مكان لقوائم الأمنيات وأعياد الميلاد والتفاصيل التي لا تريدين نسيانها.">
-A place for wishlists, birthdays and little plans.
+<p
+  data-en="Wishlists and birthday planning."
+  data-ar="لقوائم الأمنيات وتخطيط أعياد الميلاد."
+>
+Wishlists and birthday planning.
 </p>
 
 </div>
@@ -1803,18 +1595,30 @@ A place for wishlists, birthdays and little plans.
 </section>
 
 <!-- GUIDE -->
+
 <section id="guide" class="page">
 
 <div class="page-head">
 
-<small data-en="Guide" data-ar="الدليل">Guide</small>
+<small
+  data-en="Guide"
+  data-ar="الدليل"
+>
+Guide
+</small>
 
-<h2 data-en="No complicated steps." data-ar="بدون خطوات معقدة.">
+<h2
+  data-en="No complicated steps."
+  data-ar="بدون خطوات معقدة."
+>
 No complicated steps.
 </h2>
 
-<p data-en="You do not need to create anything yourself. Just choose a file and download it." data-ar="لا تحتاجين إلى إنشاء أي شيء بنفسكِ. فقط اختاري الملف وحمّليه.">
-You do not need to create anything yourself.
+<p
+  data-en="Choose a file, see the real PDF preview and download it."
+  data-ar="اختاري الملف، شاهدي معاينة ملف PDF الحقيقي، ثم حمّليه."
+>
+Choose, preview and download.
 </p>
 
 </div>
@@ -1822,35 +1626,83 @@ You do not need to create anything yourself.
 <div class="steps">
 
 <div class="step">
+
 <b>01</b>
-<h4 data-en="Choose" data-ar="اختاري">Choose</h4>
-<p data-en="Open the files page and pick the file you want." data-ar="افتحي صفحة الملفات واختاري الملف الذي تريدينه.">
-Open the files page and pick the file you want.
+
+<h4
+  data-en="Choose"
+  data-ar="اختاري"
+>
+Choose
+</h4>
+
+<p
+  data-en="Pick the file that fits what you need."
+  data-ar="اختاري الملف المناسب لما تحتاجينه."
+>
+Pick the file that fits what you need.
 </p>
+
 </div>
 
 <div class="step">
+
 <b>02</b>
-<h4 data-en="Preview" data-ar="شاهدي المعاينة">Preview</h4>
-<p data-en="See the style and structure before downloading." data-ar="شاهدي الشكل والترتيب قبل التحميل.">
-See the style and structure before downloading.
+
+<h4
+  data-en="Preview"
+  data-ar="شاهدي المعاينة"
+>
+Preview
+</h4>
+
+<p
+  data-en="The preview shows the actual PDF you will download."
+  data-ar="المعاينة تعرض ملف PDF الحقيقي الذي ستقومين بتحميله."
+>
+The preview shows the actual PDF.
 </p>
+
 </div>
 
 <div class="step">
+
 <b>03</b>
-<h4 data-en="Language" data-ar="اللغة">Language</h4>
-<p data-en="Use English or Arabic from the language switch." data-ar="استخدمي الإنجليزية أو العربية من زر اللغة.">
-Use English or Arabic from the language switch.
+
+<h4
+  data-en="Language"
+  data-ar="اللغة"
+>
+Language
+</h4>
+
+<p
+  data-en="Choose English or Arabic."
+  data-ar="اختاري الإنجليزية أو العربية."
+>
+Choose English or Arabic.
 </p>
+
 </div>
 
 <div class="step">
+
 <b>04</b>
-<h4 data-en="Download" data-ar="حمّلي">Download</h4>
-<p data-en="Choose the language and click download. The PDF will download directly." data-ar="اختاري اللغة واضغطي تحميل، وسيتم تنزيل ملف PDF مباشرة.">
-Choose the language and click download. The PDF will download directly.
+
+<h4
+  data-en="Download"
+  data-ar="حمّلي"
+>
+Download
+</h4>
+
+<p
+  data-en="Download the finished PDF directly."
+  data-ar="حمّلي ملف PDF النهائي مباشرة."
+>
+Download the finished PDF directly.
 </p>
+
 </div>
 
 </div>
@@ -1860,14 +1712,20 @@ Choose the language and click download. The PDF will download directly.
 <div class="faq-item">
 
 <div class="faq-q">
-<span data-en="Do I need to create a PDF myself?" data-ar="هل أحتاج إلى إنشاء ملف PDF بنفسي؟">
-Do I need to create a PDF myself?
+<span
+  data-en="Do I need to create the PDF myself?"
+  data-ar="هل أحتاج إلى إنشاء ملف PDF بنفسي؟"
+>
+Do I need to create the PDF myself?
 </span>
 <span>+</span>
 </div>
 
-<div class="faq-a" data-en="No. You simply choose the file and click download. The PDF is generated and downloaded directly." data-ar="لا. فقط اختاري الملف واضغطي تحميل، وسيتم إنشاء ملف PDF وتنزيله مباشرة.">
-No. You simply choose the file and click download.
+<div class="faq-a"
+  data-en="No. The file is generated for you and downloaded directly."
+  data-ar="لا. يتم تجهيز الملف لكِ وتنزيله مباشرة."
+>
+No. The file is generated for you and downloaded directly.
 </div>
 
 </div>
@@ -1875,14 +1733,20 @@ No. You simply choose the file and click download.
 <div class="faq-item">
 
 <div class="faq-q">
-<span data-en="Can I choose Arabic or English?" data-ar="هل أستطيع اختيار العربية أو الإنجليزية؟">
+<span
+  data-en="Can I choose Arabic or English?"
+  data-ar="هل أستطيع اختيار العربية أو الإنجليزية؟"
+>
 Can I choose Arabic or English?
 </span>
 <span>+</span>
 </div>
 
-<div class="faq-a" data-en="Yes. Use the language switch before downloading." data-ar="نعم. استخدمي زر اللغة قبل التحميل.">
-Yes. Use the language switch before downloading.
+<div class="faq-a"
+  data-en="Yes. Use the language switch before opening or downloading a file."
+  data-ar="نعم. استخدمي زر اللغة قبل فتح الملف أو تحميله."
+>
+Yes. Use the language switch.
 </div>
 
 </div>
@@ -1890,14 +1754,20 @@ Yes. Use the language switch before downloading.
 <div class="faq-item">
 
 <div class="faq-q">
-<span data-en="Are the files one page?" data-ar="هل الملفات صفحة واحدة؟">
-Are the files one page?
+<span
+  data-en="Is the preview the real file?"
+  data-ar="هل المعاينة هي الملف الحقيقي؟"
+>
+Is the preview the real file?
 </span>
 <span>+</span>
 </div>
 
-<div class="faq-a" data-en="No. The collection is built with multi-page PDFs and different layouts for different products." data-ar="لا. الملفات متعددة الصفحات، ولكل منتج ترتيب وتصميم مختلف.">
-No. The collection is built with multi-page PDFs and different layouts for different products.
+<div class="faq-a"
+  data-en="Yes. The preview is created from the same PDF that is downloaded."
+  data-ar="نعم. المعاينة يتم إنشاؤها من نفس ملف PDF الذي يتم تحميله."
+>
+Yes. The preview is the real file.
 </div>
 
 </div>
@@ -1905,14 +1775,20 @@ No. The collection is built with multi-page PDFs and different layouts for diffe
 <div class="faq-item">
 
 <div class="faq-q">
-<span data-en="Can I print them?" data-ar="هل أستطيع طباعتها؟">
-Can I print them?
+<span
+  data-en="Can I print the files?"
+  data-ar="هل أستطيع طباعة الملفات؟"
+>
+Can I print the files?
 </span>
 <span>+</span>
 </div>
 
-<div class="faq-a" data-en="Yes. The pages are designed as printable worksheets." data-ar="نعم. الصفحات مصممة لتكون مناسبة للطباعة.">
-Yes. The pages are designed as printable worksheets.
+<div class="faq-a"
+  data-en="Yes. The files are designed as printable worksheets."
+  data-ar="نعم. الملفات مصممة لتكون مناسبة للطباعة."
+>
+Yes. The files are printable.
 </div>
 
 </div>
@@ -1922,133 +1798,202 @@ Yes. The pages are designed as printable worksheets.
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact" class="page">
 
 <div class="page-head">
 
-<small data-en="Contact" data-ar="التواصل">Contact</small>
+<small
+  data-en="Contact"
+  data-ar="التواصل"
+>
+Contact
+</small>
 
-<h2 data-en="Let’s stay in touch." data-ar="خلينا على تواصل.">
+<h2
+  data-en="Let’s stay in touch."
+  data-ar="خلينا على تواصل."
+>
 Let’s stay in touch.
 </h2>
 
-<p data-en="Your contact details can be added here whenever you are ready." data-ar="يمكنكِ إضافة معلومات التواصل هنا عندما تكونين جاهزة.">
+<p
+  data-en="Your contact details can be added here whenever you are ready."
+  data-ar="يمكنكِ إضافة معلومات التواصل هنا عندما تكونين جاهزة."
+>
 Your contact details can be added here whenever you are ready.
 </p>
 
 </div>
 
-<div class="contact-layout">
-
 <div class="contact-box">
 
-<h3 data-en="Contact details" data-ar="معلومات التواصل">
+<h3
+  data-en="Contact details"
+  data-ar="معلومات التواصل"
+>
 Contact details
 </h3>
 
-<p data-en="Add your information here later. Visitors will see the details you choose to enter." data-ar="أضيفي معلوماتكِ هنا لاحقاً، وسيظهر للزوار ما تختارين كتابته.">
-Add your information here later. Visitors will see the details you choose to enter.
+<p
+  data-en="Add the information you want visitors to use."
+  data-ar="أضيفي المعلومات التي تريدين أن يستخدمها الزوار."
+>
+Add the information you want visitors to use.
 </p>
 
 <div class="contact-fields">
 
 <div class="contact-field">
-<span data-en="WhatsApp / Phone" data-ar="واتساب / رقم الهاتف">
+
+<span
+  data-en="WhatsApp / Phone"
+  data-ar="واتساب / رقم الهاتف"
+>
 WhatsApp / Phone
 </span>
+
 <strong>______________________</strong>
+
 </div>
 
 <div class="contact-field">
-<span data-en="Email" data-ar="البريد الإلكتروني">
+
+<span
+  data-en="Email"
+  data-ar="البريد الإلكتروني"
+>
 Email
 </span>
+
 <strong>______________________</strong>
+
 </div>
 
 <div class="contact-field">
-<span data-en="Instagram" data-ar="إنستغرام">
+
+<span
+  data-en="Instagram"
+  data-ar="إنستغرام"
+>
 Instagram
 </span>
+
 <strong>______________________</strong>
-</div>
 
 </div>
+
 </div>
 </div>
 
 </section>
 
 <!-- DETAIL -->
+
 <section id="detail" class="page">
+
 <div id="detail-content"></div>
+
 </section>
 
 </main>
 
 <footer>
-<span>© 2026 Digital Files. All rights reserved.</span>
-<span data-en="Made for everyday planning." data-ar="مصممة للتخطيط اليومي.">
+
+<span>
+© 2026 Digital Files. All rights reserved.
+</span>
+
+<span
+  data-en="Made for everyday planning."
+  data-ar="مصممة للتخطيط اليومي."
+>
 Made for everyday planning.
 </span>
+
 </footer>
 
 </div>
 
 <script>
+
+/* =========================================================
+   APP
+========================================================= */
+
 let lang="en";
+let previewUrl=null;
 
 function setLanguage(l){
+
   lang=l;
-  document.getElementById("language").classList.add("hidden");
-  document.getElementById("app").classList.remove("hidden");
+
+  document.getElementById("language")
+    .classList.add("hidden");
+
+  document.getElementById("app")
+    .classList.remove("hidden");
+
   applyLang();
   renderFiles();
 }
 
 function toggleLanguage(){
+
   lang=lang==="en"?"ar":"en";
+
   applyLang();
   renderFiles();
 
-  const detail=document.getElementById("detail");
+  const active=document.querySelector(
+    "#detail.active .detail"
+  );
 
-  if(detail && detail.classList.contains("active")){
-    const current=document.querySelector("[data-detail-id]");
-    if(current){
-      showDetail(current.dataset.detailId);
-    }
+  if(active){
+    showDetail(active.dataset.detailId);
   }
 }
 
 function applyLang(){
+
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
 
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    const value=el.getAttribute(lang==="ar"?"data-ar":"data-en");
+  document.documentElement.dir=
+    lang==="ar"?"rtl":"ltr";
 
-    if(value!==null){
-      if(
-        el.classList.contains("about-feature") ||
-        (el.closest(".about-feature") && el.tagName==="H3")
-      ){
-        el.innerHTML=value;
-      }else{
+  document.querySelectorAll("[data-en]")
+    .forEach(el=>{
+
+      const value=el.getAttribute(
+        lang==="ar"?"data-ar":"data-en"
+      );
+
+      if(value!==null){
         el.textContent=value;
       }
-    }
-  });
+
+    });
 }
 
 function toggleMenu(){
-  document.getElementById("drawer").classList.toggle("hidden");
+
+  document
+    .getElementById("drawer")
+    .classList.toggle("hidden");
+
 }
 
 function go(id){
-  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
 
-  document.getElementById(id).classList.add("active");
+  document
+    .querySelectorAll(".page")
+    .forEach(p=>p.classList.remove("active"));
+
+  const page=document.getElementById(id);
+
+  if(page){
+    page.classList.add("active");
+  }
 
   window.scrollTo({
     top:0,
@@ -2060,122 +2005,153 @@ function go(id){
   }
 }
 
+/* =========================================================
+   FILE DATA
+========================================================= */
+
+const files=[
+
+{
+ id:"study",
+ cat:"study",
+ color:"blue",
+ pages:5,
+ title:{
+  en:"Study Planner",
+  ar:"مخطط الدراسة"
+ },
+ desc:{
+  en:"Plan your week, subjects and study sessions in one clear place.",
+  ar:"نظمي أسبوعكِ وموادكِ وجلسات المذاكرة في مكان واضح."
+ }
+},
+
+{
+ id:"exam",
+ cat:"study",
+ color:"lav",
+ pages:5,
+ title:{
+  en:"Exam Planner",
+  ar:"مخطط الاختبارات"
+ },
+ desc:{
+  en:"Keep your exams, revision topics and preparation days organized.",
+  ar:"نظمي اختباراتكِ ومواضيع المراجعة وأيام الاستعداد."
+ }
+},
+
+{
+ id:"homework",
+ cat:"study",
+ color:"sage",
+ pages:4,
+ title:{
+  en:"Homework Tracker",
+  ar:"متابعة الواجبات"
+ },
+ desc:{
+  en:"Track assignments, deadlines and unfinished school work.",
+  ar:"تابعي الواجبات والمواعيد والمهام الدراسية التي لم تنتهِ بعد."
+ }
+},
+
+{
+ id:"selfcare",
+ cat:"self",
+ color:"rose",
+ pages:5,
+ title:{
+  en:"Self-Care Planner",
+  ar:"مخطط العناية بالنفس"
+ },
+ desc:{
+  en:"A gentle space for feelings, routines, rest and small care moments.",
+  ar:"مساحة لطيفة للمشاعر والروتين والراحة ولحظات العناية الصغيرة."
+ }
+},
+
+{
+ id:"habit",
+ cat:"self",
+ color:"lav",
+ pages:4,
+ title:{
+  en:"Habit Tracker",
+  ar:"متابعة العادات"
+ },
+ desc:{
+  en:"Choose a few habits and follow your progress throughout the month.",
+  ar:"اختاري بعض العادات وتابعي تقدمكِ خلال الشهر."
+ }
+},
+
+{
+ id:"hair",
+ cat:"self",
+ color:"sage",
+ pages:5,
+ title:{
+  en:"Curly Hair Routine",
+  ar:"روتين الشعر الكيرلي"
+ },
+ desc:{
+  en:"Plan wash days, record products and learn what works for your curls.",
+  ar:"نظمي أيام الغسل وسجلي المنتجات وما يناسب شعركِ الكيرلي."
+ }
+},
+
+{
+ id:"wishlist",
+ cat:"life",
+ color:"peach",
+ pages:4,
+ title:{
+  en:"Wishlist",
+  ar:"قائمة الأمنيات"
+ },
+ desc:{
+  en:"Keep things you want, need or dream about in one pretty list.",
+  ar:"اجمعي الأشياء التي تريدينها أو تحتاجينها أو تحلمين بها في قائمة مرتبة."
+ }
+},
+
+{
+ id:"birthday",
+ cat:"life",
+ color:"rose",
+ pages:5,
+ title:{
+  en:"Birthday Planner",
+  ar:"مخطط عيد الميلاد"
+ },
+ desc:{
+  en:"Plan gifts, budget, tasks and the little details before the big day.",
+  ar:"خططي للهدايا والميزانية والمهام والتفاصيل الصغيرة قبل اليوم المميز."
+ }
+}
+
+];
+
 function filterFiles(cat){
+
   go("files");
 
   setTimeout(()=>{
-    document.querySelectorAll(".cat-block").forEach(x=>{
-      x.classList.toggle("hidden",x.dataset.cat!==cat);
-    });
+
+    document
+      .querySelectorAll(".cat-block")
+      .forEach(block=>{
+
+        block.classList.toggle(
+          "hidden",
+          block.dataset.cat!==cat
+        );
+
+      });
+
   },0);
 }
-
-const files=[
-  {
-    id:"study",
-    cat:"study",
-    color:"blue",
-    title:{
-      en:"Study Planner",
-      ar:"مخطط الدراسة"
-    },
-    desc:{
-      en:"Plan your school week, priorities and study sessions.",
-      ar:"نظمي أسبوعكِ الدراسي وأولوياتكِ وجلسات المذاكرة."
-    }
-  },
-  {
-    id:"exam",
-    cat:"study",
-    color:"blue",
-    title:{
-      en:"Exam Planner",
-      ar:"مخطط الاختبارات"
-    },
-    desc:{
-      en:"Organize exams, revision and what needs your attention.",
-      ar:"نظمي الاختبارات والمراجعة وما يحتاج إلى اهتمامكِ."
-    }
-  },
-  {
-    id:"homework",
-    cat:"study",
-    color:"lav",
-    title:{
-      en:"Homework Tracker",
-      ar:"متابعة الواجبات"
-    },
-    desc:{
-      en:"Keep assignments, deadlines and school tasks visible.",
-      ar:"خلي الواجبات والمواعيد والمهام الدراسية واضحة أمامكِ."
-    }
-  },
-  {
-    id:"selfcare",
-    cat:"self",
-    color:"sage",
-    title:{
-      en:"Self-Care Planner",
-      ar:"مخطط العناية بالنفس"
-    },
-    desc:{
-      en:"A gentle space for routines, feelings and small care moments.",
-      ar:"مساحة لطيفة للروتين والمشاعر ولحظات العناية الصغيرة."
-    }
-  },
-  {
-    id:"habit",
-    cat:"self",
-    color:"lav",
-    title:{
-      en:"Habit Tracker",
-      ar:"متابعة العادات"
-    },
-    desc:{
-      en:"Track small habits and notice your progress.",
-      ar:"تابعي عاداتكِ الصغيرة ولاحظي تقدمكِ."
-    }
-  },
-  {
-    id:"hair",
-    cat:"self",
-    color:"sage",
-    title:{
-      en:"Curly Hair Guide",
-      ar:"دليل الشعر الكيرلي"
-    },
-    desc:{
-      en:"Wash-day planning, routine notes and product tracking.",
-      ar:"تنظيم يوم الغسل والروتين ومتابعة المنتجات."
-    }
-  },
-  {
-    id:"wishlist",
-    cat:"life",
-    color:"peach",
-    title:{
-      en:"Wishlist",
-      ar:"قائمة الأمنيات"
-    },
-    desc:{
-      en:"A pretty place for things you want, need or dream about.",
-      ar:"مكان مرتب للأشياء التي تريدينها أو تحتاجينها أو تحلمين بها."
-    }
-  },
-  {
-    id:"birthday",
-    cat:"life",
-    color:"rose",
-    title:{
-      en:"Birthday Planner",
-      ar:"مخطط عيد الميلاد"
-    },
-    desc:{
-      en:"Plan gifts, details, tasks and the little things that matter.",
-      ar:"خططي للهدايا والتفاصيل والمهام والأشياء الصغيرة المهمة."
-    }
-  }
-];
 
 function renderFiles(){
 
@@ -2189,63 +2165,87 @@ function renderFiles(){
     ["life","Lifestyle","أسلوب الحياة"]
   ];
 
-  root.innerHTML=cats.map(([cat,en,ar])=>`
+  root.innerHTML=cats.map(
+    ([cat,en,ar])=>`
 
     <div class="cat-block" data-cat="${cat}">
 
       <div class="cat-title">
-        <h3>${lang==="ar"?ar:en}</h3>
+
+        <h3>
+          ${lang==="ar"?ar:en}
+        </h3>
+
         <div class="cat-rule"></div>
+
       </div>
 
       <div class="file-grid">
 
-        ${files.filter(f=>f.cat===cat).map((f,i)=>`
+        ${
+          files
+          .filter(f=>f.cat===cat)
+          .map((f,i)=>`
 
           <article class="file-card ${f.color}">
 
             <div>
 
               <div class="file-no">
-                ${String(i+1).padStart(2,"0")} / ${cat.toUpperCase()}
+                ${String(i+1).padStart(2,"0")}
+                / ${cat.toUpperCase()}
               </div>
 
               <div class="mark">
                 ${f.title.en.charAt(0)}
               </div>
 
-              <h4>${f.title[lang]}</h4>
+              <h4>
+                ${f.title[lang]}
+              </h4>
 
-              <p>${f.desc[lang]}</p>
+              <p>
+                ${f.desc[lang]}
+              </p>
 
             </div>
 
             <div class="file-foot">
 
               <span class="file-no">
-                PDF · MULTI-PAGE
+                PDF · ${f.pages} PAGES
               </span>
 
               <button
                 class="open-file"
                 onclick="showDetail('${f.id}')"
               >
-                ${lang==="ar"?"فتح الملف ←":"Open file →"}
+                ${
+                  lang==="ar"
+                  ?"فتح الملف ←"
+                  :"Open file →"
+                }
               </button>
 
             </div>
 
           </article>
 
-        `).join("")}
+        `).join("")
+        }
 
       </div>
     </div>
 
   `).join("");
+
 }
 
-function showDetail(id){
+/* =========================================================
+   DETAIL + REAL PDF PREVIEW
+========================================================= */
+
+async function showDetail(id){
 
   const f=files.find(x=>x.id===id);
 
@@ -2255,21 +2255,42 @@ function showDetail(id){
 
   document.getElementById("detail-content").innerHTML=`
 
-    <div class="detail" data-detail-id="${id}">
+    <div
+      class="detail"
+      data-detail-id="${id}"
+    >
 
       <div class="detail-side">
 
-        <button class="back" onclick="go('files')">
-          ${lang==="ar"?"← العودة للملفات":"← Back to files"}
+        <button
+          class="back"
+          onclick="go('files')"
+        >
+          ${
+            lang==="ar"
+            ?"← العودة للملفات"
+            :"← Back to files"
+          }
         </button>
 
         <div class="eyebrow">
-          ${f.cat==="study"?"01":f.cat==="self"?"02":"03"} / ${f.cat.toUpperCase()}
+          ${
+            f.cat==="study"
+            ?"01"
+            :f.cat==="self"
+            ?"02"
+            :"03"
+          }
+          / ${f.cat.toUpperCase()}
         </div>
 
-        <h2>${f.title[lang]}</h2>
+        <h2>
+          ${f.title[lang]}
+        </h2>
 
-        <p>${f.desc[lang]}</p>
+        <p>
+          ${f.desc[lang]}
+        </p>
 
         <div class="detail-meta">
 
@@ -2284,7 +2305,7 @@ function showDetail(id){
             <strong>
               ${lang==="ar"?"الصفحات":"Pages"}
             </strong>
-            4–5 pages
+            ${f.pages}
           </div>
 
           <div class="meta">
@@ -2296,57 +2317,35 @@ function showDetail(id){
 
         </div>
 
-        <div class="download-row">
-
-          <button class="btn" onclick="downloadPDF('${id}')">
-            ${lang==="ar"?"تحميل PDF":"Download PDF"}
-          </button>
-
-        </div>
+        <button
+          class="btn"
+          onclick="downloadPDF('${id}')"
+        >
+          ${
+            lang==="ar"
+            ?"تحميل PDF"
+            :"Download PDF"
+          }
+        </button>
 
       </div>
 
       <div class="detail-preview">
 
-        <div class="preview-page ${f.cat}">
+        <div id="preview-holder">
 
-          <small>
-            ${f.cat.toUpperCase()} / PREVIEW
-          </small>
-
-          <h3>
-            ${f.title[lang]}
-          </h3>
-
-          <p style="color:#68736f;font-size:12px;line-height:1.6;">
-            ${f.desc[lang]}
-          </p>
-
-          <div class="preview-grid">
-
-            <div class="preview-box">
-              ${lang==="ar"?"الأولوية":"Priority"}
-            </div>
-
-            <div class="preview-box">
-              ${lang==="ar"?"التاريخ":"Date"}
-            </div>
-
-            <div class="preview-box">
-              ${lang==="ar"?"ملاحظات":"Notes"}
-            </div>
-
-            <div class="preview-box">
-              ${lang==="ar"?"متابعة":"Track"}
-            </div>
-
-            <div
-              class="preview-box"
-              style="grid-column:1/-1;height:120px;"
-            >
-              ${lang==="ar"?"مساحة للكتابة والتخطيط":"Space to write & plan"}
-            </div>
-
+          <div style="
+            min-height:650px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#777477;
+          ">
+            ${
+              lang==="ar"
+              ?"جاري تجهيز المعاينة..."
+              :"Preparing preview..."
+            }
           </div>
 
         </div>
@@ -2354,22 +2353,74 @@ function showDetail(id){
       </div>
 
     </div>
-
   `;
+
+  try{
+
+    const doc=await buildPDF(id);
+
+    const blob=doc.output("blob");
+
+    if(previewUrl){
+      URL.revokeObjectURL(previewUrl);
+    }
+
+    previewUrl=URL.createObjectURL(blob);
+
+    document.getElementById("preview-holder").innerHTML=`
+
+      <iframe
+        class="pdf-preview"
+        src="${previewUrl}"
+        title="${f.title.en}"
+      ></iframe>
+
+    `;
+
+  }catch(error){
+
+    console.error(error);
+
+    document.getElementById("preview-holder").innerHTML=`
+
+      <div style="
+        min-height:650px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        color:#777477;
+        padding:30px;
+      ">
+        ${
+          lang==="ar"
+          ?"تعذر تجهيز المعاينة حالياً."
+          :"The preview could not be prepared."
+        }
+      </div>
+
+    `;
+  }
 }
+
+/* =========================================================
+   PDF
+========================================================= */
 
 let amiriFontBase64=null;
 
 async function loadAmiriFont(){
 
-  if(amiriFontBase64) return amiriFontBase64;
+  if(amiriFontBase64){
+    return amiriFontBase64;
+  }
 
   const response=await fetch(
     "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/amiri/Amiri-Regular.ttf"
   );
 
   if(!response.ok){
-    throw new Error("Could not load Amiri font.");
+    throw new Error("Font error");
   }
 
   const buffer=await response.arrayBuffer();
@@ -2414,20 +2465,17 @@ async function prepareArabicPDF(doc){
     "normal"
   );
 
-  doc.setFont(
-    "Amiri",
-    "normal"
-  );
+  doc.setFont("Amiri","normal");
 }
 
 function txt(en,ar){
   return lang==="ar"?ar:en;
 }
 
-function footer(doc,n){
+function footer(doc,page){
 
   doc.setFontSize(7);
-  doc.setTextColor(110);
+  doc.setTextColor(120,116,116);
 
   doc.text(
     "Digital Files",
@@ -2436,25 +2484,16 @@ function footer(doc,n){
   );
 
   doc.text(
-    String(n),
-    190,
-    287
-  );
-
-  doc.setTextColor(
-    77,
-    74,
-    74
+    String(page),
+    192,
+    287,
+    {align:"right"}
   );
 }
 
-function cover(doc,title,subtitle,accent){
+function bg(doc,c){
 
-  doc.setFillColor(
-    accent[0],
-    accent[1],
-    accent[2]
-  );
+  doc.setFillColor(c[0],c[1],c[2]);
 
   doc.rect(
     0,
@@ -2463,55 +2502,11 @@ function cover(doc,title,subtitle,accent){
     297,
     "F"
   );
-
-  doc.setTextColor(
-    77,
-    74,
-    74
-  );
-
-  doc.setFontSize(9);
-
-  doc.text(
-    "DIGITAL FILES",
-    18,
-    24
-  );
-
-  doc.setFontSize(30);
-
-  doc.text(
-    title,
-    18,
-    110,
-    {maxWidth:170}
-  );
-
-  doc.setFontSize(12);
-
-  doc.text(
-    subtitle,
-    18,
-    140,
-    {maxWidth:160}
-  );
-
-  doc.setFontSize(8);
-
-  doc.text(
-    "PRINTABLE PDF",
-    18,
-    270
-  );
 }
 
-function addHeader(doc,title,section){
+function header(doc,title,section){
 
-  doc.setTextColor(
-    77,
-    74,
-    74
-  );
+  doc.setTextColor(77,74,74);
 
   doc.setFontSize(8);
 
@@ -2524,16 +2519,12 @@ function addHeader(doc,title,section){
 
   doc.text(
     section,
-    190,
+    192,
     18,
     {align:"right"}
   );
 
-  doc.setDrawColor(
-    210,
-    210,
-    205
-  );
+  doc.setDrawColor(210,206,201);
 
   doc.line(
     18,
@@ -2543,13 +2534,77 @@ function addHeader(doc,title,section){
   );
 }
 
-function box(doc,x,y,w,h,label){
+function cover(doc,title,subtitle,color){
 
-  doc.setDrawColor(
-    205,
-    205,
-    198
+  bg(doc,color);
+
+  doc.setTextColor(77,74,74);
+
+  doc.setFontSize(8);
+
+  doc.text(
+    "DIGITAL FILES",
+    18,
+    23
   );
+
+  doc.setFontSize(29);
+
+  doc.text(
+    title,
+    18,
+    105,
+    {maxWidth:170}
+  );
+
+  doc.setFontSize(12);
+
+  doc.text(
+    subtitle,
+    18,
+    137,
+    {maxWidth:160}
+  );
+
+  doc.setFontSize(8);
+
+  doc.text(
+    txt(
+      "PRINTABLE PDF",
+      "ملف قابل للطباعة"
+    ),
+    18,
+    270
+  );
+
+  footer(doc,1);
+}
+
+function field(
+  doc,
+  x,
+  y,
+  w,
+  h,
+  label,
+  color=[255,253,249]
+){
+
+  doc.setFillColor(
+    color[0],
+    color[1],
+    color[2]
+  );
+
+  doc.rect(
+    x,
+    y,
+    w,
+    h,
+    "F"
+  );
+
+  doc.setDrawColor(207,202,196);
 
   doc.rect(
     x,
@@ -2558,396 +2613,253 @@ function box(doc,x,y,w,h,label){
     h
   );
 
-  doc.setFontSize(9);
+  doc.setTextColor(95,91,91);
 
-  doc.setTextColor(80);
+  doc.setFontSize(8);
 
   doc.text(
     label,
     x+5,
-    y+8,
+    y+9,
     {maxWidth:w-10}
-  );
-
-  doc.setTextColor(
-    77,
-    74,
-    74
   );
 }
 
-function studyPDF(id){
+function lineList(doc,x,y,count,gap){
+
+  doc.setDrawColor(214,210,205);
+
+  for(let i=0;i<count;i++){
+
+    doc.line(
+      x,
+      y+i*gap,
+      192,
+      y+i*gap
+    );
+
+  }
+}
+
+function checkbox(doc,x,y,label){
+
+  doc.setDrawColor(205,200,195);
+
+  doc.rect(
+    x,
+    y,
+    6,
+    6
+  );
+
+  doc.setTextColor(85,81,81);
+
+  doc.setFontSize(8);
+
+  doc.text(
+    label,
+    x+10,
+    y+5,
+    {maxWidth:165}
+  );
+}
+
+/* =========================================================
+   STUDY PLANNER
+========================================================= */
+
+function makeStudy(){
 
   const {jsPDF}=window.jspdf;
-
   const d=new jsPDF();
 
-  const accent=
-    id==="study"
-      ?[231,238,242]
-      :[224,235,240];
-
-  const title=
-    files.find(f=>f.id===id).title[lang];
+  const title=files[0].title[lang];
 
   cover(
     d,
     title,
-    id==="exam"
-      ?txt(
-        "Plan smarter. Revise with purpose.",
-        "خططي بذكاء وراجعي بوضوح."
-      )
-      :id==="homework"
-        ?txt(
-          "Keep every task visible.",
-          "خلي كل واجب واضحاً أمامكِ."
-        )
-        :txt(
-          "A calmer school week.",
-          "أسبوع دراسي أكثر ترتيباً."
-        ),
-    accent
+    txt(
+      "A calmer school week starts with a clear plan.",
+      "أسبوع دراسي أكثر هدوءاً يبدأ بخطة واضحة."
+    ),
+    [232,242,247]
   );
 
   d.addPage();
 
-  addHeader(
+  header(
     d,
     title,
+    txt("MY WEEK","أسبوعي")
+  );
+
+  const days=[
+    txt("Monday","الاثنين"),
+    txt("Tuesday","الثلاثاء"),
+    txt("Wednesday","الأربعاء"),
+    txt("Thursday","الخميس"),
+    txt("Friday","الجمعة")
+  ];
+
+  days.forEach((day,i)=>{
+
+    field(
+      d,
+      18,
+      40+i*45,
+      174,
+      37,
+      day,
+      [246,250,251]
+    );
+
+  });
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("PRIORITIES","الأولويات")
+  );
+
+  field(
+    d,
+    18,
+    40,
+    174,
+    35,
     txt(
-      "WEEK AT A GLANCE",
-      "نظرة على الأسبوع"
-    )
+      "What matters most this week?",
+      "ما أهم شيء هذا الأسبوع؟"
+    ),
+    [244,249,251]
   );
 
   for(let i=0;i<5;i++){
 
-    box(
+    checkbox(
       d,
-      18+i*34,
-      48,
-      30,
-      175,
-      ["MON","TUE","WED","THU","FRI"][i]
-    );
-
-  }
-
-  d.addPage();
-
-  addHeader(
-    d,
-    title,
-    txt(
-      "PRIORITIES",
-      "الأولويات"
-    )
-  );
-
-  for(let i=0;i<6;i++){
-
-    box(
-      d,
-      18,
-      45+i*36,
-      174,
-      28,
-      "□ "+txt(
-        "Priority / task",
-        "أولوية / مهمة"
+      20,
+      95+i*27,
+      txt(
+        "Priority "+(i+1),
+        "الأولوية "+(i+1)
       )
     );
 
   }
 
-  d.addPage();
-
-  addHeader(
-    d,
-    title,
-    txt(
-      "FOCUS & NOTES",
-      "التركيز والملاحظات"
-    )
-  );
-
-  box(
+  field(
     d,
     18,
-    45,
+    235,
     174,
-    90,
+    30,
     txt(
-      "Main focus",
-      "التركيز الأساسي"
-    )
+      "One thing I want to finish",
+      "شيء واحد أريد إنجازه"
+    ),
+    [246,241,248]
   );
 
-  box(
-    d,
-    18,
-    147,
-    84,
-    95,
-    txt(
-      "Notes",
-      "ملاحظات"
-    )
-  );
-
-  box(
-    d,
-    108,
-    147,
-    84,
-    95,
-    txt(
-      "Next steps",
-      "الخطوات التالية"
-    )
-  );
+  footer(d,3);
 
   d.addPage();
 
-  addHeader(
+  header(
     d,
     title,
-    txt(
-      "WEEKLY REFLECTION",
-      "مراجعة الأسبوع"
-    )
+    txt("STUDY SESSIONS","جلسات المذاكرة")
   );
 
-  box(
-    d,
-    18,
-    48,
-    174,
-    48,
-    txt(
-      "What went well?",
-      "ما الذي سار بشكل جيد؟"
-    )
-  );
+  ["Subject","Time","What to study","Done"]
+  .map(x=>txt(x,{
+    Subject:"المادة",
+    Time:"الوقت",
+    "What to study":"ماذا سأذاكر؟",
+    Done:"تم"
+  }[x]))
+  .forEach((x,i)=>{
 
-  box(
-    d,
-    18,
-    108,
-    174,
-    48,
-    txt(
-      "What needs attention?",
-      "ما الذي يحتاج اهتماماً؟"
-    )
-  );
-
-  box(
-    d,
-    18,
-    168,
-    174,
-    48,
-    txt(
-      "Next week I will…",
-      "الأسبوع القادم سأ…"
-    )
-  );
-
-  footer(d,5);
-
-  return d;
-}
-
-function selfPDF(id){
-
-  const {jsPDF}=window.jspdf;
-
-  const d=new jsPDF();
-
-  const title=
-    files.find(f=>f.id===id).title[lang];
-
-  cover(
-    d,
-    title,
-    id==="habit"
-      ?txt(
-        "Small actions, repeated gently.",
-        "خطوات صغيرة تتكرر بلطف."
-      )
-      :id==="hair"
-        ?txt(
-          "A simple routine for your curls.",
-          "روتين بسيط لشعركِ الكيرلي."
-        )
-        :txt(
-          "Check in. Slow down. Care for you.",
-          "راجعي يومكِ، اهدئي، واهتمي بنفسكِ."
-        ),
-    id==="hair"
-      ?[233,238,232]
-      :[238,234,242]
-  );
-
-  d.addPage();
-
-  addHeader(
-    d,
-    title,
-    txt(
-      "CHECK-IN",
-      "مراجعة سريعة"
-    )
-  );
-
-  box(
-    d,
-    18,
-    45,
-    174,
-    48,
-    txt(
-      "How do I feel today?",
-      "كيف أشعر اليوم؟"
-    )
-  );
-
-  box(
-    d,
-    18,
-    105,
-    84,
-    100,
-    txt(
-      "Energy",
-      "الطاقة"
-    )
-  );
-
-  box(
-    d,
-    108,
-    105,
-    84,
-    100,
-    txt(
-      "What I need",
-      "ما أحتاجه"
-    )
-  );
-
-  d.addPage();
-
-  addHeader(
-    d,
-    title,
-    txt(
-      "ROUTINE",
-      "الروتين"
-    )
-  );
-
-  for(let i=0;i<7;i++){
-
-    box(
+    field(
       d,
-      18,
-      45+i*30,
-      174,
-      23,
-      "□ "+
-      (
-        id==="hair"
-          ?txt(
-            "Hair step / product",
-            "خطوة شعر / منتج"
-          )
-          :txt(
-            "Small care action",
-            "خطوة عناية صغيرة"
-          )
-      )
+      18+i*43.5,
+      42,
+      40,
+      27,
+      x,
+      [238,246,249]
     );
 
-  }
+  });
 
-  d.addPage();
+  for(let r=0;r<6;r++){
 
-  addHeader(
-    d,
-    title,
-    txt(
-      id==="habit"
-        ?"MONTHLY TRACKER"
-        :"NOTES",
-      id==="habit"
-        ?"متابعة شهرية"
-        :"ملاحظات"
-    )
-  );
+    for(let c=0;c<4;c++){
 
-  for(let r=0;r<5;r++){
-
-    for(let c=0;c<7;c++){
+      d.setDrawColor(210,205,200);
 
       d.rect(
-        18+c*25,
-        48+r*25,
-        21,
-        21
+        18+c*43.5,
+        75+r*28,
+        40,
+        24
       );
 
     }
 
   }
 
-  box(
-    d,
-    18,
-    190,
-    174,
-    45,
-    txt(
-      "Reflection",
-      "مراجعة"
-    )
-  );
+  footer(d,4);
 
   d.addPage();
 
-  addHeader(
+  header(
     d,
     title,
-    txt(
-      "RESET PAGE",
-      "صفحة إعادة الترتيب"
-    )
+    txt("WEEKLY RESET","مراجعة الأسبوع")
   );
 
-  box(
+  field(
     d,
     18,
+    45,
+    174,
     48,
-    174,
-    60,
     txt(
-      "What will I keep?",
-      "ما الذي سأستمر عليه؟"
-    )
+      "What went well?",
+      "ما الذي سار بشكل جيد؟"
+    ),
+    [239,247,250]
   );
 
-  box(
+  field(
     d,
     18,
-    122,
+    108,
     174,
-    60,
+    48,
     txt(
-      "What will I change?",
-      "ما الذي سأغيّره؟"
-    )
+      "What needs more time?",
+      "ما الذي يحتاج وقتاً أكثر؟"
+    ),
+    [245,241,248]
+  );
+
+  field(
+    d,
+    18,
+    171,
+    174,
+    48,
+    txt(
+      "Next week I will...",
+      "الأسبوع القادم سأ..."
+    ),
+    [239,245,238]
   );
 
   footer(d,5);
@@ -2955,187 +2867,266 @@ function selfPDF(id){
   return d;
 }
 
-function lifePDF(id){
+/* =========================================================
+   EXAM PLANNER
+========================================================= */
+
+function makeExam(){
 
   const {jsPDF}=window.jspdf;
-
   const d=new jsPDF();
 
-  const title=
-    files.find(f=>f.id===id).title[lang];
+  const title=files[1].title[lang];
 
   cover(
     d,
     title,
-    id==="birthday"
-      ?txt(
-        "Plan the day, enjoy the moment.",
-        "خططي لليوم واستمتعي باللحظة."
-      )
-      :txt(
-        "A place for things you want.",
-        "مكان للأشياء التي تتمنينها."
-      ),
-    id==="birthday"
-      ?[241,229,231]
-      :[242,230,222]
+    txt(
+      "Know what is coming and prepare one step at a time.",
+      "اعرفي ما هو قادم واستعدي خطوة بخطوة."
+    ),
+    [241,236,247]
   );
 
   d.addPage();
 
-  addHeader(
+  header(
     d,
     title,
-    txt(
-      "BIG LIST",
-      "القائمة الأساسية"
-    )
-  );
-
-  for(let i=0;i<8;i++){
-
-    box(
-      d,
-      18,
-      45+i*28,
-      174,
-      21,
-      "□ "+
-      (
-        id==="birthday"
-          ?txt(
-            "Task / detail",
-            "مهمة / تفصيل"
-          )
-          :txt(
-            "Item",
-            "غرض"
-          )
-      )
-    );
-
-  }
-
-  d.addPage();
-
-  addHeader(
-    d,
-    title,
-    txt(
-      "DETAILS",
-      "التفاصيل"
-    )
-  );
-
-  box(
-    d,
-    18,
-    45,
-    84,
-    60,
-    txt(
-      "Name / item",
-      "الاسم / الغرض"
-    )
-  );
-
-  box(
-    d,
-    108,
-    45,
-    84,
-    60,
-    txt(
-      "Budget",
-      "الميزانية"
-    )
-  );
-
-  box(
-    d,
-    18,
-    119,
-    84,
-    60,
-    txt(
-      "Priority",
-      "الأولوية"
-    )
-  );
-
-  box(
-    d,
-    108,
-    119,
-    84,
-    60,
-    txt(
-      "Where / when",
-      "أين / متى"
-    )
-  );
-
-  box(
-    d,
-    18,
-    193,
-    174,
-    45,
-    txt(
-      "Notes",
-      "ملاحظات"
-    )
-  );
-
-  d.addPage();
-
-  addHeader(
-    d,
-    title,
-    txt(
-      "PLAN",
-      "الخطة"
-    )
+    txt("EXAM LIST","قائمة الاختبارات")
   );
 
   for(let i=0;i<6;i++){
 
-    box(
+    field(
       d,
       18,
-      45+i*32,
+      40+i*34,
       174,
-      25,
-      (i+1)+"  "+
+      27,
       txt(
-        "Plan / checklist",
-        "خطة / قائمة تحقق"
+        "Subject / Exam date",
+        "المادة / موعد الاختبار"
+      ),
+      [248,245,250]
+    );
+
+  }
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("REVISION PLAN","خطة المراجعة")
+  );
+
+  field(
+    d,
+    18,
+    42,
+    174,
+    38,
+    txt(
+      "Topics I need to review",
+      "المواضيع التي أحتاج إلى مراجعتها"
+    ),
+    [243,238,248]
+  );
+
+  for(let i=0;i<7;i++){
+
+    checkbox(
+      d,
+      20,
+      100+i*24,
+      txt(
+        "Topic "+(i+1),
+        "الموضوع "+(i+1)
       )
     );
 
   }
 
+  footer(d,3);
+
   d.addPage();
 
-  addHeader(
+  header(
+    d,
+    title,
+    txt("BEFORE THE EXAM","قبل الاختبار")
+  );
+
+  const checks=[
+    txt("I reviewed the main topics.","راجعت المواضيع الأساسية."),
+    txt("I checked my notes.","راجعت ملاحظاتي."),
+    txt("I practised questions.","تدربت على الأسئلة."),
+    txt("I prepared what I need.","جهزت ما أحتاجه."),
+    txt("I know what to revise next.","أعرف ماذا أراجع بعد ذلك.")
+  ];
+
+  checks.forEach((x,i)=>{
+    checkbox(d,20,55+i*32,x);
+  });
+
+  field(
+    d,
+    18,
+    230,
+    174,
+    35,
+    txt(
+      "One thing I should remember",
+      "شيء واحد يجب أن أتذكره"
+    ),
+    [246,241,248]
+  );
+
+  footer(d,4);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("AFTER THE EXAM","بعد الاختبار")
+  );
+
+  field(
+    d,
+    18,
+    45,
+    174,
+    45,
+    txt(
+      "What felt easy?",
+      "ما الذي كان سهلاً؟"
+    ),
+    [241,247,244]
+  );
+
+  field(
+    d,
+    18,
+    105,
+    174,
+    45,
+    txt(
+      "What should I practise more?",
+      "ما الذي أحتاج إلى التدرب عليه أكثر؟"
+    ),
+    [245,241,248]
+  );
+
+  field(
+    d,
+    18,
+    165,
+    174,
+    45,
+    txt(
+      "What will I do differently next time?",
+      "ماذا سأفعل بشكل مختلف في المرة القادمة؟"
+    ),
+    [247,239,233]
+  );
+
+  footer(d,5);
+
+  return d;
+}
+
+/* =========================================================
+   HOMEWORK
+========================================================= */
+
+function makeHomework(){
+
+  const {jsPDF}=window.jspdf;
+  const d=new jsPDF();
+
+  const title=files[2].title[lang];
+
+  cover(
     d,
     title,
     txt(
-      "FINAL NOTES",
-      "ملاحظات أخيرة"
-    )
+      "See every assignment before it becomes a last-minute task.",
+      "شاهدي كل واجباتكِ قبل أن تصبح مهمة في آخر لحظة."
+    ),
+    [235,244,236]
   );
 
-  box(
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("TASK LIST","قائمة المهام")
+  );
+
+  for(let i=0;i<7;i++){
+
+    field(
+      d,
+      18,
+      42+i*30,
+      174,
+      23,
+      txt(
+        "Subject / Assignment / Due date",
+        "المادة / الواجب / موعد التسليم"
+      ),
+      [243,248,243]
+    );
+
+  }
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("DETAILS","التفاصيل")
+  );
+
+  field(d,18,45,82,55,txt("Subject","المادة"),[242,248,242]);
+  field(d,108,45,84,55,txt("Due date","موعد التسليم"),[242,248,242]);
+
+  field(d,18,120,174,65,txt("What do I need to do?","ماذا أحتاج أن أفعل؟"),[247,243,248]);
+
+  field(d,18,205,174,45,txt("What do I need to bring?","ماذا أحتاج أن أحضر؟"),[247,240,234]);
+
+  footer(d,3);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("FINISH & REVIEW","الإنجاز والمراجعة")
+  );
+
+  [
+    txt("I finished the assignment.","أنجزت الواجب."),
+    txt("I checked my answers.","راجعت إجاباتي."),
+    txt("I packed what I need.","جهزت ما أحتاجه."),
+    txt("I know when it is due.","أعرف موعد التسليم.")
+  ].forEach((x,i)=>checkbox(d,20,55+i*35,x));
+
+  field(
     d,
     18,
-    48,
+    220,
     174,
-    120,
-    txt(
-      "Write anything you do not want to forget.",
-      "اكتبي أي شيء لا تريدين نسيانه."
-    )
+    45,
+    txt("Notes","ملاحظات"),
+    [242,248,242]
   );
 
   footer(d,4);
@@ -3143,14 +3134,639 @@ function lifePDF(id){
   return d;
 }
 
+/* =========================================================
+   SELF CARE
+========================================================= */
+
+function makeSelfCare(){
+
+  const {jsPDF}=window.jspdf;
+  const d=new jsPDF();
+
+  const title=files[3].title[lang];
+
+  cover(
+    d,
+    title,
+    txt(
+      "A quiet place to check in with yourself.",
+      "مساحة هادئة لمراجعة يومكِ والاهتمام بنفسكِ."
+    ),
+    [247,234,238]
+  );
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("TODAY","اليوم")
+  );
+
+  field(
+    d,
+    18,
+    45,
+    174,
+    48,
+    txt(
+      "How am I feeling today?",
+      "كيف أشعر اليوم؟"
+    ),
+    [250,241,244]
+  );
+
+  field(
+    d,
+    18,
+    108,
+    84,
+    85,
+    txt("My energy","طاقتي"),
+    [245,240,247]
+  );
+
+  field(
+    d,
+    108,
+    108,
+    84,
+    85,
+    txt("What I need","ما أحتاجه"),
+    [239,247,241]
+  );
+
+  field(
+    d,
+    18,
+    208,
+    174,
+    42,
+    txt(
+      "One kind thing I can do for myself",
+      "شيء لطيف أستطيع فعله لنفسي"
+    ),
+    [248,237,239]
+  );
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("SMALL CARE","عناية صغيرة")
+  );
+
+  [
+    txt("Drink enough water.","شرب كمية كافية من الماء."),
+    txt("Take a proper break.","أخذ استراحة حقيقية."),
+    txt("Do something I enjoy.","فعل شيء أستمتع به."),
+    txt("Give myself quiet time.","أخذ وقت هادئ لنفسي."),
+    txt("Get ready for tomorrow.","الاستعداد للغد.")
+  ].forEach((x,i)=>checkbox(d,20,55+i*32,x));
+
+  field(
+    d,
+    18,
+    230,
+    174,
+    35,
+    txt(
+      "Something that made me smile",
+      "شيء جعلني أبتسم"
+    ),
+    [250,242,246]
+  );
+
+  footer(d,3);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("ROUTINE","الروتين")
+  );
+
+  lineList(d,18,55,7,28);
+
+  field(
+    d,
+    18,
+    245,
+    174,
+    30,
+    txt(
+      "What do I want to remember?",
+      "ماذا أريد أن أتذكر؟"
+    ),
+    [243,239,247]
+  );
+
+  footer(d,4);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("WEEKLY CHECK-IN","مراجعة الأسبوع")
+  );
+
+  field(d,18,45,174,42,txt("What helped me this week?","ما الذي ساعدني هذا الأسبوع؟"),[239,247,242]);
+  field(d,18,102,174,42,txt("What felt difficult?","ما الذي كان صعباً؟"),[248,240,244]);
+  field(d,18,159,174,42,txt("What do I want more of?","ماذا أريد أكثر؟"),[243,239,248]);
+  field(d,18,216,174,42,txt("A small goal for next week","هدف صغير للأسبوع القادم"),[247,240,233]);
+
+  footer(d,5);
+
+  return d;
+}
+
+/* =========================================================
+   HABIT TRACKER
+========================================================= */
+
+function makeHabit(){
+
+  const {jsPDF}=window.jspdf;
+  const d=new jsPDF();
+
+  const title=files[4].title[lang];
+
+  cover(
+    d,
+    title,
+    txt(
+      "Small habits are easier to follow when you can see them.",
+      "العادات الصغيرة تصبح أسهل عندما تستطيعين رؤية تقدمكِ."
+    ),
+    [242,237,248]
+  );
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("MY HABITS","عاداتي")
+  );
+
+  for(let i=0;i<6;i++){
+
+    field(
+      d,
+      18,
+      45+i*31,
+      174,
+      23,
+      txt(
+        "Habit "+(i+1),
+        "العادة "+(i+1)
+      ),
+      [247,243,250]
+    );
+
+  }
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("MONTH","الشهر")
+  );
+
+  for(let row=0;row<5;row++){
+
+    for(let col=0;col<7;col++){
+
+      d.setDrawColor(211,205,214);
+
+      d.rect(
+        18+col*25,
+        45+row*35,
+        21,
+        28
+      );
+
+    }
+
+  }
+
+  field(
+    d,
+    18,
+    235,
+    174,
+    30,
+    txt(
+      "What helped me stay consistent?",
+      "ما الذي ساعدني على الاستمرار؟"
+    ),
+    [242,248,242]
+  );
+
+  footer(d,3);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("REFLECTION","مراجعة")
+  );
+
+  field(d,18,48,174,50,txt("What went well?","ما الذي سار بشكل جيد؟"),[242,238,248]);
+  field(d,18,112,174,50,txt("What was difficult?","ما الذي كان صعباً؟"),[248,241,244]);
+  field(d,18,176,174,50,txt("What will I keep doing?","ما الذي سأستمر عليه؟"),[239,247,242]);
+
+  footer(d,4);
+
+  return d;
+}
+
+/* =========================================================
+   CURLY HAIR
+========================================================= */
+
+function makeHair(){
+
+  const {jsPDF}=window.jspdf;
+  const d=new jsPDF();
+
+  const title=files[5].title[lang];
+
+  cover(
+    d,
+    title,
+    txt(
+      "Keep your routine simple and learn what works for your curls.",
+      "خلي روتين شعركِ بسيطاً وسجلي ما يناسب تجعيداتكِ."
+    ),
+    [235,243,235]
+  );
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("WASH DAY","يوم الغسل")
+  );
+
+  [
+    txt("Before washing","قبل الغسل"),
+    txt("Shampoo","الشامبو"),
+    txt("Conditioner","البلسم"),
+    txt("Leave-in","ليف إن"),
+    txt("Styling","التصفيف"),
+    txt("Drying","التجفيف")
+  ].forEach((x,i)=>{
+
+    field(
+      d,
+      18,
+      42+i*31,
+      174,
+      23,
+      x,
+      [240,247,240]
+    );
+
+  });
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("PRODUCT NOTES","ملاحظات المنتجات")
+  );
+
+  field(d,18,45,84,50,txt("Product","المنتج"),[242,248,242]);
+  field(d,108,45,84,50,txt("What I noticed","ماذا لاحظت؟"),[242,248,242]);
+
+  lineList(d,18,120,5,25);
+
+  field(
+    d,
+    18,
+    240,
+    174,
+    30,
+    txt(
+      "Would I use it again?",
+      "هل سأستخدمه مرة أخرى؟"
+    ),
+    [247,241,246]
+  );
+
+  footer(d,3);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("ROUTINE CHECK","مراجعة الروتين")
+  );
+
+  [
+    txt("My hair felt soft.","شعري كان ناعماً."),
+    txt("My curls had enough moisture.","تجعيدات شعري كانت مرطبة."),
+    txt("The styling lasted well.","التصفيف استمر بشكل جيد."),
+    txt("I liked the result.","أعجبتني النتيجة.")
+  ].forEach((x,i)=>checkbox(d,20,55+i*34,x));
+
+  field(
+    d,
+    18,
+    220,
+    174,
+    45,
+    txt(
+      "What should I change next time?",
+      "ماذا أريد أن أغيّر في المرة القادمة؟"
+    ),
+    [241,248,241]
+  );
+
+  footer(d,4);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("MY ROUTINE","روتيني")
+  );
+
+  lineList(d,18,50,8,27);
+
+  footer(d,5);
+
+  return d;
+}
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+function makeWishlist(){
+
+  const {jsPDF}=window.jspdf;
+
+  const d=new jsPDF();
+
+  const title=files[6].title[lang];
+
+  cover(
+    d,
+    title,
+    txt(
+      "A place for the things you want, need or dream about.",
+      "مكان للأشياء التي تريدينها أو تحتاجينها أو تحلمين بها."
+    ),
+    [247,232,221]
+  );
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("MY WISHLIST","قائمة أمنياتي")
+  );
+
+  for(let i=0;i<7;i++){
+
+    field(
+      d,
+      18,
+      42+i*31,
+      174,
+      24,
+      txt(
+        "Item / Why I want it",
+        "الغرض / لماذا أريده؟"
+      ),
+      [250,244,239]
+    );
+
+  }
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("COMPARE","مقارنة")
+  );
+
+  field(d,18,45,84,55,txt("Item","الغرض"),[249,240,233]);
+  field(d,108,45,84,55,txt("Price","السعر"),[249,240,233]);
+
+  field(d,18,120,84,55,txt("Need it?","هل أحتاجه؟"),[243,248,242]);
+  field(d,108,120,84,55,txt("Priority","الأولوية"),[243,248,242]);
+
+  field(d,18,195,174,50,txt("My final choice","اختياري النهائي"),[245,240,247]);
+
+  footer(d,3);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("PLAN TO BUY","خطة الشراء")
+  );
+
+  [
+    txt("What will I buy first?","ماذا سأشتري أولاً؟"),
+    txt("How much do I want to spend?","كم أريد أن أنفق؟"),
+    txt("What can wait?","ما الذي يمكن أن ينتظر؟")
+  ].forEach((x,i)=>{
+
+    field(
+      d,
+      18,
+      50+i*55,
+      174,
+      40,
+      x,
+      [248,240,232]
+    );
+
+  });
+
+  footer(d,4);
+
+  return d;
+}
+
+/* =========================================================
+   BIRTHDAY
+========================================================= */
+
+function makeBirthday(){
+
+  const {jsPDF}=window.jspdf;
+
+  const d=new jsPDF();
+
+  const title=files[7].title[lang];
+
+  cover(
+    d,
+    title,
+    txt(
+      "Plan the details so you can enjoy the day.",
+      "خططي للتفاصيل حتى تستمتعي باليوم."
+    ),
+    [247,233,237]
+  );
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("BIG PICTURE","الصورة الكبيرة")
+  );
+
+  field(d,18,45,84,45,txt("Date","التاريخ"),[249,241,244]);
+  field(d,108,45,84,45,txt("Age","العمر"),[249,241,244]);
+
+  field(d,18,110,174,48,txt("Theme / idea","الفكرة / الثيم"),[247,239,243]);
+  field(d,18,175,174,48,txt("What do I want the day to feel like?","كيف أريد أن يكون شعور اليوم؟"),[243,247,242]);
+
+  footer(d,2);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("GIFTS","الهدايا")
+  );
+
+  for(let i=0;i<6;i++){
+
+    field(
+      d,
+      18,
+      45+i*31,
+      174,
+      24,
+      txt(
+        "Gift idea / Budget",
+        "فكرة الهدية / الميزانية"
+      ),
+      [250,241,244]
+    );
+
+  }
+
+  footer(d,3);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("TO-DO LIST","قائمة المهام")
+  );
+
+  [
+    txt("Choose the gifts.","اختيار الهدايا."),
+    txt("Prepare the decorations.","تجهيز الزينة."),
+    txt("Plan the food.","تخطيط الطعام."),
+    txt("Prepare the outfit.","تجهيز اللبس."),
+    txt("Check the final details.","مراجعة التفاصيل الأخيرة.")
+  ].forEach((x,i)=>checkbox(d,20,55+i*34,x));
+
+  footer(d,4);
+
+  d.addPage();
+
+  header(
+    d,
+    title,
+    txt("FINAL CHECK","المراجعة الأخيرة")
+  );
+
+  field(d,18,45,174,42,txt("What must not be forgotten?","ما الشيء الذي يجب ألا أنساه؟"),[248,239,243]);
+  field(d,18,102,174,42,txt("What is already ready?","ما الذي أصبح جاهزاً؟"),[240,247,242]);
+  field(d,18,159,174,42,txt("One thing I am excited about","شيء واحد متحمسة له"),[246,239,248]);
+
+  footer(d,5);
+
+  return d;
+}
+
+/* =========================================================
+   BUILD THE CORRECT PDF
+========================================================= */
+
+async function buildPDF(id){
+
+  let doc;
+
+  if(id==="study"){
+    doc=makeStudy();
+  }
+  else if(id==="exam"){
+    doc=makeExam();
+  }
+  else if(id==="homework"){
+    doc=makeHomework();
+  }
+  else if(id==="selfcare"){
+    doc=makeSelfCare();
+  }
+  else if(id==="habit"){
+    doc=makeHabit();
+  }
+  else if(id==="hair"){
+    doc=makeHair();
+  }
+  else if(id==="wishlist"){
+    doc=makeWishlist();
+  }
+  else if(id==="birthday"){
+    doc=makeBirthday();
+  }
+
+  if(!doc){
+    throw new Error("Unknown file");
+  }
+
+  await prepareArabicPDF(doc);
+
+  return doc;
+}
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
 async function downloadPDF(id){
 
   if(!window.jspdf){
 
     alert(
       lang==="ar"
-        ?"انتظري قليلاً حتى يتم تحميل أداة PDF."
-        :"Please wait for the PDF library to load."
+      ?"انتظري قليلاً حتى يتم تحميل أداة PDF."
+      :"Please wait for the PDF library to load."
     );
 
     return;
@@ -3158,31 +3774,17 @@ async function downloadPDF(id){
 
   try{
 
-    const {jsPDF}=window.jspdf;
-
-    let d;
-
-    if(
-      ["study","exam","homework"].includes(id)
-    ){
-      d=studyPDF(id);
-    }
-    else if(
-      ["selfcare","habit","hair"].includes(id)
-    ){
-      d=selfPDF(id);
-    }
-    else{
-      d=lifePDF(id);
-    }
-
-    await prepareArabicPDF(d);
+    const doc=await buildPDF(id);
 
     const f=files.find(x=>x.id===id);
 
-    d.save(
-      f.title.en.replaceAll(" ","-")+"-"+lang+".pdf"
-    );
+    const filename=
+      f.title.en
+      .replaceAll(" ","-")
+      +"_"+lang
+      +".pdf";
+
+    doc.save(filename);
 
   }catch(error){
 
@@ -3190,11 +3792,16 @@ async function downloadPDF(id){
 
     alert(
       lang==="ar"
-        ?"حدثت مشكلة بسيطة أثناء تجهيز الملف. حاولي مرة أخرى."
-        :"Something went wrong while preparing the PDF. Please try again."
+      ?"حدثت مشكلة أثناء تجهيز الملف. حاولي مرة أخرى."
+      :"Something went wrong while preparing the file."
     );
+
   }
 }
+
+/* =========================================================
+   FAQ
+========================================================= */
 
 document.addEventListener(
   "click",
@@ -3208,8 +3815,6 @@ document.addEventListener(
 
   }
 );
-
-renderFiles();
 
 </script>
 
